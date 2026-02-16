@@ -17,7 +17,8 @@
     "worker-fleet:direct": "node --import tsx cli/worker-fleet.ts",
     "cleanup": "tsx cli/cleanup.ts",
     "queue-admin": "tsx cli/queue-admin.ts",
-    "analyze-logs": "tsx cli/analyze-logs.ts"
+    "analyze-logs": "tsx cli/analyze-logs.ts",
+    "bump:af": "pnpm update @supaku/agentfactory @supaku/agentfactory-cli @supaku/agentfactory-dashboard @supaku/agentfactory-linear @supaku/agentfactory-nextjs @supaku/agentfactory-server --latest"
   },
   "dependencies": {
     "@supaku/agentfactory": "^0.7.2",
