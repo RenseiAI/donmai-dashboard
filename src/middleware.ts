@@ -1,4 +1,12 @@
-import { createAgentFactoryMiddleware } from '@supaku/agentfactory-nextjs'
+/**
+ * Next.js Middleware — Edge Runtime Compatible
+ *
+ * Uses the /middleware subpath export which only loads Edge-compatible
+ * modules. Do NOT import from the main barrel ('@supaku/agentfactory-nextjs')
+ * — it pulls in Node.js-only dependencies via re-exports.
+ */
+
+import { createAgentFactoryMiddleware } from '@supaku/agentfactory-nextjs/middleware'
 
 const { middleware } = createAgentFactoryMiddleware()
 
@@ -9,7 +17,6 @@ export const config = {
   matcher: [
     '/api/:path*',
     '/webhook',
-    '/dashboard',
     '/pipeline',
     '/settings',
     '/sessions/:path*',
