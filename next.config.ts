@@ -49,7 +49,8 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   transpilePackages: ['@supaku/agentfactory-dashboard'],
   allowedDevOrigins: ['127.0.0.1', 'localhost'],
-  reactCompiler: true,
+  // reactCompiler requires babel-plugin-react-compiler; enable when needed
+  // reactCompiler: true,
 
   // Add security headers to all routes
   async headers() {
