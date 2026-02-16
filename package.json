@@ -1,0 +1,53 @@
+{
+  "name": "agent-fleet",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "worker": "tsx cli/worker.ts",
+    "worker:direct": "node --import tsx cli/worker.ts",
+    "orchestrator": "tsx cli/orchestrator.ts",
+    "worker-fleet": "tsx cli/worker-fleet.ts",
+    "worker-fleet:direct": "node --import tsx cli/worker-fleet.ts",
+    "cleanup": "tsx cli/cleanup.ts",
+    "queue-admin": "tsx cli/queue-admin.ts",
+    "analyze-logs": "tsx cli/analyze-logs.ts"
+  },
+  "dependencies": {
+    "@supaku/agentfactory": "^0.7.2",
+    "@supaku/agentfactory-cli": "^0.7.2",
+    "@supaku/agentfactory-dashboard": "^0.7.2",
+    "@supaku/agentfactory-linear": "^0.7.2",
+    "@supaku/agentfactory-nextjs": "^0.7.2",
+    "@supaku/agentfactory-server": "^0.7.2",
+    "ioredis": "^5.4.1",
+    "next": "16.1.1",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^16.1.1",
+    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/typography": "^0.5.13",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "dotenv": "^16.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.1",
+    "ioredis-mock": "^8.9.0",
+    "tailwindcss": "^4",
+    "tsx": "^4",
+    "typescript": "^5",
+    "typescript-eslint": "^8.48.1",
+    "vitest": "^3.2.3"
+  }
+}
