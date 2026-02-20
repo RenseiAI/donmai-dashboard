@@ -21,7 +21,7 @@
     "terminals.autorun": true,
     "terminals.terminals": [
       {
-        "name": "AgentFleet Govenor",
+        "name": "AgentFleet Governor",
         "color": "terminal.ansiWhite",
         "icon": "robot",
         "commands": ["tmux kill-session -t agentfleet-govenor 2>/dev/null; tmux new-session -s agentfleet-govenor 'pnpm governor; exec zsh'"],
