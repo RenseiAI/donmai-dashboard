@@ -14,8 +14,8 @@
  *   --max-dispatches <n>        Max concurrent dispatches per scan (default: 3)
  *   --mode <poll-only|event-driven>  Execution mode (default: event-driven)
  *   --once                      Run a single scan pass and exit
- *   --no-auto-research          Disable auto-research
- *   --no-auto-backlog-creation  Disable auto-backlog-creation
+ *   --auto-research              Enable auto-research from Icebox (default: off)
+ *   --auto-backlog-creation      Enable auto-backlog-creation from Icebox (default: off)
  *   --no-auto-development       Disable auto-development
  *   --no-auto-qa                Disable auto-QA
  *   --no-auto-acceptance        Disable auto-acceptance
@@ -52,6 +52,7 @@ import {
   getWorkflowState,
   RedisProcessingStateStorage,
   queueWork,
+  storeSessionState,
   type QueuedWork,
 } from '@supaku/agentfactory-server'
 
@@ -84,8 +85,8 @@ function parseArgs(): GovernorArgs {
     projects: [],
     scanIntervalMs: Number(process.env.GOVERNOR_POLL_INTERVAL_MS) || 300_000,
     maxConcurrentDispatches: 3,
-    enableAutoResearch: true,
-    enableAutoBacklogCreation: true,
+    enableAutoResearch: false,
+    enableAutoBacklogCreation: false,
     enableAutoDevelopment: true,
     enableAutoQA: true,
     enableAutoAcceptance: true,
@@ -100,7 +101,9 @@ function parseArgs(): GovernorArgs {
       case '--max-dispatches': result.maxConcurrentDispatches = parseInt(argv[++i]!, 10); break
       case '--mode': result.mode = argv[++i] as GovernorArgs['mode']; break
       case '--once': result.once = true; break
+      case '--auto-research': result.enableAutoResearch = true; break
       case '--no-auto-research': result.enableAutoResearch = false; break
+      case '--auto-backlog-creation': result.enableAutoBacklogCreation = true; break
       case '--no-auto-backlog-creation': result.enableAutoBacklogCreation = false; break
       case '--no-auto-development': result.enableAutoDevelopment = false; break
       case '--no-auto-qa': result.enableAutoQA = false; break
@@ -230,9 +233,12 @@ function createDependencies(linearClient: ReturnType<typeof createLinearAgentCli
       console.log(`[governor] Dispatching: ${issueId} → ${action} (${workType})`)
 
       let issueIdentifier = issueId
+      let projectName: string | undefined
       try {
         const issue = await linearClient.getIssue(issueId)
         issueIdentifier = issue.identifier
+        const project = await (issue as unknown as { project: PromiseLike<{ name: string } | null> }).project
+        projectName = project?.name
       } catch { /* use issueId as fallback */ }
 
       let sessionId: string | undefined
@@ -241,18 +247,37 @@ function createDependencies(linearClient: ReturnType<typeof createLinearAgentCli
         sessionId = result.sessionId
       } catch { /* queue without session */ }
 
+      const finalSessionId = sessionId ?? `governor-${issueId}-${Date.now()}`
+      const now = Date.now()
+
+      // Register a pending session FIRST so hasActiveSession() returns true
+      // immediately, preventing re-dispatch on subsequent poll sweeps.
+      await storeSessionState(finalSessionId, {
+        issueId,
+        issueIdentifier,
+        claudeSessionId: null,
+        worktreePath: '',
+        status: 'pending',
+        workerId: null,
+        queuedAt: now,
+        priority: 3,
+        workType: workType as QueuedWork['workType'],
+        projectName,
+      })
+
       const work: QueuedWork = {
-        sessionId: sessionId ?? `governor-${issueId}-${Date.now()}`,
+        sessionId: finalSessionId,
         issueId,
         issueIdentifier,
         priority: 3,
-        queuedAt: Date.now(),
+        queuedAt: now,
         workType: workType as QueuedWork['workType'],
+        projectName,
       }
 
       const queued = await queueWork(work)
       if (queued) {
-        console.log(`[governor] Queued: ${issueIdentifier} → ${workType}`)
+        console.log(`[governor] Queued: ${issueIdentifier} → ${workType} [${projectName ?? 'unknown'}]`)
       } else {
         console.warn(`[governor] Failed to queue: ${issueIdentifier}`)
       }
