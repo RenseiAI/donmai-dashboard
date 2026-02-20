@@ -142,37 +142,35 @@ function actionToWorkType(action: GovernorAction): string {
 
 function createDependencies(linearClient: ReturnType<typeof createLinearAgentClient>): GovernorDependencies {
   const processingState = new RedisProcessingStateStorage()
-  const TERMINAL_STATUSES = ['Accepted', 'Canceled', 'Duplicate']
+
+  // Cache of parent issue IDs populated by listIssues() single GraphQL query.
+  // Eliminates per-issue isParentIssue() API calls during governor scans.
+  const parentIssueIds = new Set<string>()
 
   return {
     listIssues: async (project: string): Promise<GovernorIssue[]> => {
       try {
-        const sdk = linearClient.linearClient
-        const conn = await sdk.issues({
-          filter: {
-            project: { name: { eq: project } },
-            state: { name: { nin: TERMINAL_STATUSES } },
-          },
-        })
-        const results: GovernorIssue[] = []
-        for (const issue of conn.nodes) {
-          const state = await issue.state
-          const labels = await issue.labels()
-          const parent = await issue.parent
-          const proj = await issue.project
-          results.push({
-            id: issue.id,
-            identifier: issue.identifier,
-            title: issue.title,
-            description: issue.description ?? undefined,
-            status: state?.name ?? 'Backlog',
-            labels: labels.nodes.map(l => l.name),
-            createdAt: issue.createdAt.getTime(),
-            parentId: parent?.id,
-            project: proj?.name,
-          })
+        const rawIssues = await linearClient.listProjectIssues(project)
+
+        // Cache parent issue IDs for isParentIssue() lookups
+        parentIssueIds.clear()
+        for (const issue of rawIssues) {
+          if (issue.childCount > 0) {
+            parentIssueIds.add(issue.id)
+          }
         }
-        return results
+
+        return rawIssues.map((issue) => ({
+          id: issue.id,
+          identifier: issue.identifier,
+          title: issue.title,
+          description: issue.description,
+          status: issue.status,
+          labels: issue.labels,
+          createdAt: issue.createdAt,
+          parentId: issue.parentId,
+          project: issue.project,
+        }))
       } catch (err) {
         console.error('[governor] listIssues failed:', err)
         return []
@@ -193,6 +191,9 @@ function createDependencies(linearClient: ReturnType<typeof createLinearAgentCli
     },
 
     isParentIssue: async (issueId) => {
+      // Check cached parent IDs from listIssues (populated by single GraphQL query)
+      if (parentIssueIds.has(issueId)) return true
+      // Fall back to API for issues not in the last scan
       try { return await linearClient.isParentIssue(issueId) }
       catch { return false }
     },
