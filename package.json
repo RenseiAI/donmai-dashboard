@@ -18,6 +18,8 @@
     "cleanup": "tsx cli/cleanup.ts",
     "queue-admin": "tsx cli/queue-admin.ts",
     "analyze-logs": "tsx cli/analyze-logs.ts",
+    "governor": "tsx cli/governor.ts",
+    "governor:once": "tsx cli/governor.ts --once",
     "bump:af": "pnpm update @supaku/agentfactory @supaku/agentfactory-cli @supaku/agentfactory-dashboard @supaku/agentfactory-linear @supaku/agentfactory-nextjs @supaku/agentfactory-server --latest"
   },
   "dependencies": {

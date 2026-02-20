@@ -14,6 +14,12 @@ import {
   buildParentQAContext,
   buildParentAcceptanceContext,
 } from './prompts'
+import { initGovernorBridge } from './governor-setup'
+
+// Wire governor event bus for webhook → governor event bridging
+initGovernorBridge()
+
+const governorMode = (process.env.GOVERNOR_MODE ?? 'direct') as 'direct' | 'event-bridge' | 'governor-only'
 
 export const routes = createAllRoutes({
   linearClient: createDefaultLinearClientResolver(),
@@ -23,4 +29,5 @@ export const routes = createAllRoutes({
   autoTrigger: parseAutoTriggerConfig(),
   buildParentQAContext,
   buildParentAcceptanceContext,
+  governorMode,
 })

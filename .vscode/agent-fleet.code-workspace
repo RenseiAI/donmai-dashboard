@@ -1,0 +1,57 @@
+{
+  "folders": [
+    {
+      "path": "..",
+    },
+  ],
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Open Terminals",
+        "command": "${command:terminals.runTerminals}",
+        "type": "process",
+        "runOptions": {
+          "runOn": "folderOpen",
+        },
+      },
+    ],
+  },
+  "settings": {
+    "terminals.autorun": true,
+    "terminals.terminals": [
+      {
+        "name": "AgentFleet Govenor",
+        "color": "terminal.ansiWhite",
+        "icon": "robot",
+        "commands": ["tmux kill-session -t agentfleet-govenor 2>/dev/null; tmux new-session -s agentfleet-govenor 'pnpm governor; exec zsh'"],
+      },
+      {
+        "name": "AgentFleet Dashboard",
+        "color": "terminal.ansiGreen",
+        "icon": "account",
+        "commands": ["tmux new-session -A -s agentfleet-dashboard 'pnpm dev; exec zsh'"],
+      },
+      {
+        "name": "Claude AgentFleet #1",
+        "color": "terminal.ansiBrightGreen",
+        "icon": "squirrel",
+        "commands": ["tmux new-session -A -s claude-agentfleet-1 'claude --permission-mode acceptEdits; exec zsh'"],
+      },
+      {
+        "name": "Claude AgentFleet #2",
+        "color": "terminal.ansiBrightGreen",
+        "icon": "squirrel",
+        "commands": ["tmux new-session -A -s claude-agentfleet-2 'claude --permission-mode acceptEdits; exec zsh'"],
+      },
+    ],
+    "terminal.integrated.profiles.osx": {
+    },
+  },
+  "extensions": {
+    "recommendations": [
+      "fabiospampinato.vscode-terminals",
+      "esbenp.prettier-vscode"
+    ]
+  },
+}
