@@ -14,11 +14,10 @@ agent-fleet/
 │   ├── orchestrator.ts    # Webhook orchestrator with agent-worked marking
 │   └── governor-setup.ts  # Governor event bus bridge (webhook → Redis Stream)
 ├── src/app/               # Next.js routes (re-exports from @supaku/agentfactory-nextjs)
-├── cli/                   # Governor, worker, orchestrator, queue-admin, log analyzer
 └── .claude/agents/        # Agent definitions (developer.md)
 ```
 
-All route handlers, dashboard UI, middleware, and worker logic come from AgentFactory packages. Only a few files contain custom Supaku logic.
+All route handlers, dashboard UI, middleware, worker logic, and CLI tools come from AgentFactory packages. CLI commands (`af-worker`, `af-governor`, etc.) are provided by `@supaku/agentfactory-cli`. Only a few files in `src/lib/` contain custom Supaku logic.
 
 ## Build & Dev
 
@@ -128,8 +127,6 @@ pnpm cleanup                   # Clean up stale sessions
 - **`src/lib/config.ts`** — Route wiring and governor mode. Rarely needs changes unless adding new callbacks.
 - **`src/lib/governor-setup.ts`** — Initializes `RedisEventBus` and wires it to the webhook bridge. Only activates when `GOVERNOR_MODE != direct`.
 - **`src/lib/orchestrator.ts`** — `onAgentComplete` hook. Currently marks issues as agent-worked for auto-QA pickup.
-- **`cli/governor.ts`** — Governor CLI script. Assembles real Linear SDK + Redis dependencies and starts the governor.
-
 ## Environment
 
 Copy `.env.example` to `.env.local` and fill in secrets. Key vars:
