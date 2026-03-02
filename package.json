@@ -18,7 +18,8 @@
     "analyze-logs": "af-analyze-logs",
     "governor": "af-governor",
     "governor:once": "af-governor --once",
-    "bump:af": "pnpm update @supaku/agentfactory @supaku/agentfactory-cli @supaku/agentfactory-dashboard @supaku/agentfactory-linear @supaku/agentfactory-nextjs @supaku/agentfactory-server --latest"
+    "bump:af": "pnpm update @supaku/agentfactory @supaku/agentfactory-cli @supaku/agentfactory-dashboard @supaku/agentfactory-linear @supaku/agentfactory-nextjs @supaku/agentfactory-server --latest",
+    "prepare": "dotenvx ext precommit --install"
   },
   "dependencies": {
     "@supaku/agentfactory": "^0.7.37",
@@ -35,6 +36,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@dotenvx/dotenvx": "^1.52.0",
     "@next/eslint-plugin-next": "^16.1.1",
     "@tailwindcss/postcss": "^4",
     "@tailwindcss/typography": "^0.5.13",
