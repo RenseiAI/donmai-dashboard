@@ -108,6 +108,22 @@ pnpm worker-fleet     # Start worker fleet (uses WORKER_FLEET_SIZE)
 pnpm orchestrator     # Process backlog issues
 ```
 
+## Route Sync
+
+When AgentFactory packages are updated, new API routes or dashboard pages may be added. Use `af-sync-routes` to detect and scaffold any missing route files in `src/app/`.
+
+```bash
+pnpm sync-routes:dry     # Preview what would be created (no changes)
+pnpm sync-routes         # Create missing route files
+pnpm sync-routes:pages   # Also sync dashboard page.tsx files
+```
+
+Recommended after every package bump:
+
+```bash
+pnpm bump:af && pnpm sync-routes --pages
+```
+
 ## Admin Tools
 
 ```bash
