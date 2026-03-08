@@ -25,12 +25,12 @@
     "prepare": "dotenvx ext precommit --install"
   },
   "dependencies": {
-    "@supaku/agentfactory": "^0.7.47",
-    "@supaku/agentfactory-cli": "^0.7.47",
-    "@supaku/agentfactory-dashboard": "^0.7.47",
-    "@supaku/agentfactory-linear": "^0.7.47",
-    "@supaku/agentfactory-nextjs": "^0.7.47",
-    "@supaku/agentfactory-server": "^0.7.47",
+    "@supaku/agentfactory": "^0.7.48",
+    "@supaku/agentfactory-cli": "^0.7.48",
+    "@supaku/agentfactory-dashboard": "^0.7.48",
+    "@supaku/agentfactory-linear": "^0.7.48",
+    "@supaku/agentfactory-nextjs": "^0.7.48",
+    "@supaku/agentfactory-server": "^0.7.48",
     "ioredis": "^5.4.1",
     "next": "16.1.1",
     "react": "19.2.1",
