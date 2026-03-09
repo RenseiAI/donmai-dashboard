@@ -13,20 +13,20 @@ import {
   defaultGeneratePrompt,
   defaultDetectWorkTypeFromPrompt,
 } from '@supaku/agentfactory-linear'
-import type { AgentWorkType, SubIssueStatus } from '@supaku/agentfactory-linear'
+import type { AgentWorkType, SubIssueStatus, WorkflowContext } from '@supaku/agentfactory-linear'
 
 /**
  * Generate the appropriate prompt for a work type.
  *
  * Delegates to the canonical defaultGeneratePrompt from @supaku/agentfactory-linear.
- * The third argument (mentionContext) is passed through directly.
  */
 export function generatePromptForWorkType(
   identifier: string,
   workType: AgentWorkType,
-  mentionContext?: string
+  mentionContext?: string,
+  workflowContext?: WorkflowContext
 ): string {
-  return defaultGeneratePrompt(identifier, workType, mentionContext)
+  return defaultGeneratePrompt(identifier, workType, mentionContext, workflowContext)
 }
 
 /**
