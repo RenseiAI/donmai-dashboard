@@ -9,23 +9,23 @@ importers:
   .:
     dependencies:
       '@supaku/agentfactory':
-        specifier: ^0.7.54
-        version: 0.7.54(graphql@16.12.0)
+        specifier: ^0.7.55
+        version: 0.7.55(graphql@16.12.0)
       '@supaku/agentfactory-cli':
-        specifier: ^0.7.54
-        version: 0.7.54(graphql@16.12.0)
+        specifier: ^0.7.55
+        version: 0.7.55(graphql@16.12.0)
       '@supaku/agentfactory-dashboard':
-        specifier: ^0.7.54
-        version: 0.7.54(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)
+        specifier: ^0.7.55
+        version: 0.7.55(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)
       '@supaku/agentfactory-linear':
-        specifier: ^0.7.54
-        version: 0.7.54(graphql@16.12.0)
+        specifier: ^0.7.55
+        version: 0.7.55(graphql@16.12.0)
       '@supaku/agentfactory-nextjs':
-        specifier: ^0.7.54
-        version: 0.7.54(graphql@16.12.0)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))
+        specifier: ^0.7.55
+        version: 0.7.55(graphql@16.12.0)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))
       '@supaku/agentfactory-server':
-        specifier: ^0.7.54
-        version: 0.7.54(graphql@16.12.0)
+        specifier: ^0.7.55
+        version: 0.7.55(graphql@16.12.0)
       ioredis:
         specifier: ^5.4.1
         version: 5.9.3
@@ -1353,13 +1353,13 @@ packages:
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
 
-  '@supaku/agentfactory-cli@0.7.54':
-    resolution: {integrity: sha512-k+JNMjz0rZWtxJSrfQi9hXnHvNASPu7ce8zKwwAmZX4aLimB24L9RLKVqE42hBzIDKtNx4zxHTpFrT9zHQAGEg==}
+  '@supaku/agentfactory-cli@0.7.55':
+    resolution: {integrity: sha512-UKan5TTn3bW0L97XpkKa0K4Aa3DyMwzvpQSIgqH4U1C5q1QK0vSIPg06SFusvmV3zOe8xeExWBhI2ktlClU8zA==}
     engines: {node: '>=22.0.0'}
     hasBin: true
 
-  '@supaku/agentfactory-dashboard@0.7.54':
-    resolution: {integrity: sha512-RDNBMmdCPmOXS+UC0gIvul5INPIGIRgDyT6ICJjyAGjYePM1FDA77EvVZnpyQoKlTZwTUlh1aWXPyk9aLclkew==}
+  '@supaku/agentfactory-dashboard@0.7.55':
+    resolution: {integrity: sha512-OyT9T1AJNlCTL5kLm3nE4BPpT6reI2xMr3XeNm34e0n9lb0TDrw4+N+Y/VZm6YCNnsbtk6ltCW6m04RTVlxvag==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       next: '>=14.0.0'
@@ -1367,22 +1367,22 @@ packages:
       react-dom: '>=18.0.0'
       tailwindcss: '>=3.4.0'
 
-  '@supaku/agentfactory-linear@0.7.54':
-    resolution: {integrity: sha512-C47dAB54OF1ahPCpV1VoMHxVOMMNFKZj9en+wn2F0s/9x2+7G8gVN56/Y6RoFQwXNpcxRFYdEbo/AiFMUUQ6hw==}
+  '@supaku/agentfactory-linear@0.7.55':
+    resolution: {integrity: sha512-QJ5AqvnpGq5xOTfGpm3P5pwGI3V9fiv5h18OujCfd0QsyYUXsrwUjJwRWI05vYV20F/JGgoy/iKx07F1CQtEqQ==}
     engines: {node: '>=22.0.0'}
 
-  '@supaku/agentfactory-nextjs@0.7.54':
-    resolution: {integrity: sha512-3cdedMf3iLMa+ZpZ3bij3gCK08r7zHd4FOHFyRxQ1mqBG1Zi1IQ5HwLkM4WE/qjZJZXjqDLvrcXL9Nz1gq/idw==}
+  '@supaku/agentfactory-nextjs@0.7.55':
+    resolution: {integrity: sha512-Dj+juaEVglXMzdwTtmcSEPMOkmUbK5yR5jND2cWfyLVb5RMKkvERCzWC8/omzGPn5Cinn83ioPK5zqGqB0WqPw==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       next: '>=14.0.0'
 
-  '@supaku/agentfactory-server@0.7.54':
-    resolution: {integrity: sha512-fBWEKFaPau53PVvGtcANAJhvhYm79Um8aUr741IqMTcA1z1Rydp4EtGs0eaZsFx+0EEMPm/LIHJ1K2mdC5vLZQ==}
+  '@supaku/agentfactory-server@0.7.55':
+    resolution: {integrity: sha512-/6s0w60VTxVE8DeHlM5R0gGIg1uQB39oJYVkRpx4KPEBnnEGzkHW+KXLT/inbILG9ej120yczVCJ25dLFBYcdA==}
     engines: {node: '>=22.0.0'}
 
-  '@supaku/agentfactory@0.7.54':
-    resolution: {integrity: sha512-enYHfPh+L+ufRav8ACA1IO8Y5ERaKAZXpkFf+ccSGK4Js36g6VhlRIMqjBg+cpffRaLXQ/2R2aJQNGL97k8TZQ==}
+  '@supaku/agentfactory@0.7.55':
+    resolution: {integrity: sha512-zkOz7A7Ho08G8GkDANY5xdZ0MbnWIQJ3HRJ4JvqNcpABTHwyEmkmy7fQQtF/J/4srfzHOvCzHQzjfDwBUE1KLA==}
     engines: {node: '>=22.0.0'}
 
   '@swc/helpers@0.5.15':
@@ -4373,17 +4373,17 @@ snapshots:
 
   '@rtsao/scc@1.1.0': {}
 
-  '@supaku/agentfactory-cli@0.7.54(graphql@16.12.0)':
+  '@supaku/agentfactory-cli@0.7.55(graphql@16.12.0)':
     dependencies:
-      '@supaku/agentfactory': 0.7.54(graphql@16.12.0)
-      '@supaku/agentfactory-linear': 0.7.54(graphql@16.12.0)
-      '@supaku/agentfactory-server': 0.7.54(graphql@16.12.0)
+      '@supaku/agentfactory': 0.7.55(graphql@16.12.0)
+      '@supaku/agentfactory-linear': 0.7.55(graphql@16.12.0)
+      '@supaku/agentfactory-server': 0.7.55(graphql@16.12.0)
       dotenv: 17.3.1
     transitivePeerDependencies:
       - graphql
       - supports-color
 
-  '@supaku/agentfactory-dashboard@0.7.54(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)':
+  '@supaku/agentfactory-dashboard@0.7.55(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)':
     dependencies:
       '@radix-ui/react-dialog': 1.1.15(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       '@radix-ui/react-dropdown-menu': 2.1.16(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -4405,35 +4405,35 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@supaku/agentfactory-linear@0.7.54(graphql@16.12.0)':
+  '@supaku/agentfactory-linear@0.7.55(graphql@16.12.0)':
     dependencies:
       '@linear/sdk': 70.0.0(graphql@16.12.0)
     transitivePeerDependencies:
       - graphql
 
-  '@supaku/agentfactory-nextjs@0.7.54(graphql@16.12.0)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))':
+  '@supaku/agentfactory-nextjs@0.7.55(graphql@16.12.0)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))':
     dependencies:
-      '@supaku/agentfactory': 0.7.54(graphql@16.12.0)
-      '@supaku/agentfactory-linear': 0.7.54(graphql@16.12.0)
-      '@supaku/agentfactory-server': 0.7.54(graphql@16.12.0)
+      '@supaku/agentfactory': 0.7.55(graphql@16.12.0)
+      '@supaku/agentfactory-linear': 0.7.55(graphql@16.12.0)
+      '@supaku/agentfactory-server': 0.7.55(graphql@16.12.0)
       next: 16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
     transitivePeerDependencies:
       - graphql
       - supports-color
 
-  '@supaku/agentfactory-server@0.7.54(graphql@16.12.0)':
+  '@supaku/agentfactory-server@0.7.55(graphql@16.12.0)':
     dependencies:
-      '@supaku/agentfactory': 0.7.54(graphql@16.12.0)
-      '@supaku/agentfactory-linear': 0.7.54(graphql@16.12.0)
+      '@supaku/agentfactory': 0.7.55(graphql@16.12.0)
+      '@supaku/agentfactory-linear': 0.7.55(graphql@16.12.0)
       ioredis: 5.9.3
     transitivePeerDependencies:
       - graphql
       - supports-color
 
-  '@supaku/agentfactory@0.7.54(graphql@16.12.0)':
+  '@supaku/agentfactory@0.7.55(graphql@16.12.0)':
     dependencies:
       '@anthropic-ai/claude-agent-sdk': 0.2.74(zod@4.3.6)
-      '@supaku/agentfactory-linear': 0.7.54(graphql@16.12.0)
+      '@supaku/agentfactory-linear': 0.7.55(graphql@16.12.0)
       dotenv: 17.3.1
       handlebars: 4.7.8
       yaml: 2.8.2
