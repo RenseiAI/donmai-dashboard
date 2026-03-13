@@ -56,6 +56,8 @@ export function getPriorityForWorkType(workType: AgentWorkType): number {
     case 'coordination': return 2
     case 'qa-coordination': return 2
     case 'acceptance-coordination': return 2
+    case 'refinement-coordination': return 2
+    default: return 5
   }
 }
 
