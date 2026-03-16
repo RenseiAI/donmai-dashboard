@@ -1,11 +1,11 @@
 /**
  * Agentfactory Configuration — Central Route Wiring
  *
- * Connects Supaku-specific callbacks (prompt templates, work type detection,
- * Linear client resolution) to @supaku/agentfactory-nextjs route factories.
+ * Connects deployment-specific callbacks (prompt templates, work type detection,
+ * Linear client resolution) to @renseiai/agentfactory-nextjs route factories.
  */
 
-import { createAllRoutes, createDefaultLinearClientResolver } from '@supaku/agentfactory-nextjs'
+import { createAllRoutes, createDefaultLinearClientResolver } from '@renseiai/agentfactory-nextjs'
 import {
   generatePromptForWorkType,
   detectWorkTypeFromPrompt,

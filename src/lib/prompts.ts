@@ -1,11 +1,11 @@
 /**
- * Supaku-Specific Prompt Templates & Work Type Detection
+ * Deployment-Specific Prompt Templates & Work Type Detection
  *
- * Delegates prompt generation and work type detection to @supaku/agentfactory-linear
- * defaults, with Supaku-specific keyword extensions and helper functions.
+ * Delegates prompt generation and work type detection to @renseiai/agentfactory-linear
+ * defaults, with deployment-specific keyword extensions and helper functions.
  *
  * IMPORTANT: Do NOT fork prompt generation here. The canonical prompts live in
- * @supaku/agentfactory-linear's defaultGeneratePrompt. Bumping the package
+ * @renseiai/agentfactory-linear's defaultGeneratePrompt. Bumping the package
  * version is all that's needed to pick up prompt changes.
  */
 
@@ -15,13 +15,13 @@ import {
   defaultGetPriority,
   defaultBuildParentQAContext,
   defaultBuildParentAcceptanceContext,
-} from '@supaku/agentfactory-linear'
-import type { AgentWorkType, SubIssueStatus, WorkflowContext } from '@supaku/agentfactory-linear'
+} from '@renseiai/agentfactory-linear'
+import type { AgentWorkType, SubIssueStatus, WorkflowContext } from '@renseiai/agentfactory-linear'
 
 /**
  * Generate the appropriate prompt for a work type.
  *
- * Delegates to the canonical defaultGeneratePrompt from @supaku/agentfactory-linear.
+ * Delegates to the canonical defaultGeneratePrompt from @renseiai/agentfactory-linear.
  */
 export function generatePromptForWorkType(
   identifier: string,
@@ -35,7 +35,7 @@ export function generatePromptForWorkType(
 /**
  * Detect work type from prompt, constrained to valid options for the current status.
  *
- * Delegates to the canonical defaultDetectWorkTypeFromPrompt from @supaku/agentfactory-linear.
+ * Delegates to the canonical defaultDetectWorkTypeFromPrompt from @renseiai/agentfactory-linear.
  */
 export function detectWorkTypeFromPrompt(
   prompt: string,
@@ -47,7 +47,7 @@ export function detectWorkTypeFromPrompt(
 /**
  * Get priority for work type (lower = higher priority).
  *
- * Delegates to the canonical defaultGetPriority from @supaku/agentfactory-linear.
+ * Delegates to the canonical defaultGetPriority from @renseiai/agentfactory-linear.
  */
 export function getPriorityForWorkType(workType: AgentWorkType): number {
   return defaultGetPriority(workType)
@@ -56,7 +56,7 @@ export function getPriorityForWorkType(workType: AgentWorkType): number {
 /**
  * Build enriched QA prompt context for parent issues with sub-issues.
  *
- * Delegates to the canonical defaultBuildParentQAContext from @supaku/agentfactory-linear.
+ * Delegates to the canonical defaultBuildParentQAContext from @renseiai/agentfactory-linear.
  */
 export function buildParentQAContext(
   issueIdentifier: string,
@@ -68,7 +68,7 @@ export function buildParentQAContext(
 /**
  * Build enriched acceptance prompt context for parent issues with sub-issues.
  *
- * Delegates to the canonical defaultBuildParentAcceptanceContext from @supaku/agentfactory-linear.
+ * Delegates to the canonical defaultBuildParentAcceptanceContext from @renseiai/agentfactory-linear.
  */
 export function buildParentAcceptanceContext(
   issueIdentifier: string,

@@ -8,8 +8,8 @@
  * The governor CLI process (cli/governor.ts) consumes from the same stream.
  */
 
-import { RedisEventBus } from '@supaku/agentfactory-server'
-import { setGovernorEventBus } from '@supaku/agentfactory-nextjs'
+import { RedisEventBus } from '@renseiai/agentfactory-server'
+import { setGovernorEventBus } from '@renseiai/agentfactory-nextjs'
 
 /**
  * Initialize the governor event bus bridge.

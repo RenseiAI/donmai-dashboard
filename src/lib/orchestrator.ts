@@ -1,12 +1,12 @@
 /**
- * Webhook Orchestrator — Thin wrapper over @supaku/agentfactory-nextjs
+ * Webhook Orchestrator — Thin wrapper over @renseiai/agentfactory-nextjs
  *
- * Adds Supaku-specific behavior: marking issues as "agent-worked"
+ * Adds deployment-specific behavior: marking issues as "agent-worked"
  * when agents complete, enabling automated QA pickup.
  */
 
-import { createWebhookOrchestrator } from '@supaku/agentfactory-nextjs'
-import { markAgentWorked, createLogger } from '@supaku/agentfactory-server'
+import { createWebhookOrchestrator } from '@renseiai/agentfactory-nextjs'
+import { markAgentWorked, createLogger } from '@renseiai/agentfactory-server'
 
 const log = createLogger('orchestrator')
 

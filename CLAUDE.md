@@ -1,8 +1,8 @@
-# Agent Fleet — Supaku Deployment
+# Agent Fleet — Rensei AI Deployment
 
-Standalone private deployment of [AgentFactory](https://github.com/supaku/agentfactory) for `agent.supaku.dev`.
+Standalone private deployment of [AgentFactory](https://github.com/RenseiAI/agentfactory) for `agent.rensei.dev`.
 
-This is a **deployment repo**, not a library. It consumes AgentFactory packages from npm and adds Supaku-specific configuration.
+This is a **deployment repo**, not a library. It consumes AgentFactory packages from npm and adds deployment-specific configuration.
 
 ## Architecture
 
@@ -13,11 +13,11 @@ agent-fleet/
 │   ├── prompts.ts         # Work type keywords, prompt templates, auto-trigger config
 │   ├── orchestrator.ts    # Webhook orchestrator with agent-worked marking
 │   └── governor-setup.ts  # Governor event bus bridge (webhook → Redis Stream)
-├── src/app/               # Next.js routes (re-exports from @supaku/agentfactory-nextjs)
+├── src/app/               # Next.js routes (re-exports from @renseiai/agentfactory-nextjs)
 └── .claude/agents/        # Agent definitions (developer.md)
 ```
 
-All route handlers, dashboard UI, middleware, worker logic, and CLI tools come from AgentFactory packages. CLI commands (`af-worker`, `af-governor`, etc.) are provided by `@supaku/agentfactory-cli`. Only a few files in `src/lib/` contain custom Supaku logic.
+All route handlers, dashboard UI, middleware, worker logic, and CLI tools come from AgentFactory packages. CLI commands (`af-worker`, `af-governor`, etc.) are provided by `@renseiai/agentfactory-cli`. Only a few files in `src/lib/` contain custom deployment logic.
 
 ## Build & Dev
 
@@ -48,7 +48,7 @@ Webhooks (Vercel) ──► Redis Stream (governor:events)
                     Redis Work Queue ◄── Workers pick up work via HTTP API
 ```
 
-The governor communicates with workers indirectly through the Redis work queue. It writes work items; workers poll the HTTP API (`agent.supaku.dev`) which dequeues from Redis. The governor does not need to be co-located with workers.
+The governor communicates with workers indirectly through the Redis work queue. It writes work items; workers poll the HTTP API (`agent.rensei.dev`) which dequeues from Redis. The governor does not need to be co-located with workers.
 
 ### Running the Governor
 
@@ -158,4 +158,4 @@ Copy `.env.example` to `.env.local` and fill in secrets. Key vars:
 
 ## Deployment
 
-Deployed to Vercel as `agent.supaku.dev`. Push to `main` to deploy.
+Deployed to Vercel as `agent.rensei.dev`. Push to `main` to deploy.

@@ -8,24 +8,24 @@ importers:
 
   .:
     dependencies:
-      '@supaku/agentfactory':
-        specifier: ^0.7.58
-        version: 0.7.58(graphql@16.12.0)
-      '@supaku/agentfactory-cli':
-        specifier: ^0.7.58
-        version: 0.7.58(graphql@16.12.0)
-      '@supaku/agentfactory-dashboard':
-        specifier: ^0.7.58
-        version: 0.7.58(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)
-      '@supaku/agentfactory-linear':
-        specifier: ^0.7.58
-        version: 0.7.58(graphql@16.12.0)
-      '@supaku/agentfactory-nextjs':
-        specifier: ^0.7.58
-        version: 0.7.58(graphql@16.12.0)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))
-      '@supaku/agentfactory-server':
-        specifier: ^0.7.58
-        version: 0.7.58(graphql@16.12.0)
+      '@renseiai/agentfactory':
+        specifier: ^0.8.2
+        version: 0.8.2(graphql@16.12.0)
+      '@renseiai/agentfactory-cli':
+        specifier: ^0.8.2
+        version: 0.8.2(graphql@16.12.0)
+      '@renseiai/agentfactory-dashboard':
+        specifier: ^0.8.2
+        version: 0.8.2(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)
+      '@renseiai/agentfactory-linear':
+        specifier: ^0.8.2
+        version: 0.8.2(graphql@16.12.0)
+      '@renseiai/agentfactory-nextjs':
+        specifier: ^0.8.2
+        version: 0.8.2(graphql@16.12.0)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))
+      '@renseiai/agentfactory-server':
+        specifier: ^0.8.2
+        version: 0.8.2(graphql@16.12.0)
       ioredis:
         specifier: ^5.4.1
         version: 5.9.3
@@ -1212,6 +1212,38 @@ packages:
   '@radix-ui/rect@1.1.1':
     resolution: {integrity: sha512-HPwpGIzkl28mWyZqG52jiqDJ12waP11Pa1lGoiyUkIEuMLBP0oeK/C89esbXrxsky5we7dfd8U58nm0SgAWpVw==}
 
+  '@renseiai/agentfactory-cli@0.8.2':
+    resolution: {integrity: sha512-zWYfud2vNmIbQCXtrba2PMPU1TWjjgJjeYaOz2OgXXCBqCUGlFBV3XJeOPPpPHSv1aeSDN27rizex+OvFE8GTw==}
+    engines: {node: '>=22.0.0'}
+    hasBin: true
+
+  '@renseiai/agentfactory-dashboard@0.8.2':
+    resolution: {integrity: sha512-F34CjVCDw8M+D4NVAj9H4MTMrny00yk2cxm09w60Oxx/bqKlxooyhzpbMkBuJlZUvZsM9skEafmV6ii0S8TItQ==}
+    engines: {node: '>=22.0.0'}
+    peerDependencies:
+      next: '>=14.0.0'
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
+      tailwindcss: '>=3.4.0'
+
+  '@renseiai/agentfactory-linear@0.8.2':
+    resolution: {integrity: sha512-19TaPXtO26/WB0iaWoqv3QMB5tMDRrEWpGDmqlCafyp/J02jNbiGC26YOmIxdjHhfstaSTkfCPcJEpO4nw/6zQ==}
+    engines: {node: '>=22.0.0'}
+
+  '@renseiai/agentfactory-nextjs@0.8.2':
+    resolution: {integrity: sha512-xT4M4f+j8xgoZP+9OApC7qRv6PEt2ZN5PfJqy8MHeTy4twCZKQA/wx9917GVyOKVfzce0yAjhxHEldkRvqW9+A==}
+    engines: {node: '>=22.0.0'}
+    peerDependencies:
+      next: '>=14.0.0'
+
+  '@renseiai/agentfactory-server@0.8.2':
+    resolution: {integrity: sha512-UXkEs2jORq/7c5riTG3hFtarXLp8jrZNalPKaxj98a+bsEL9WKFmyHnFIpEMK2UMoVbJfPSDG/3BuEdwI4A0DA==}
+    engines: {node: '>=22.0.0'}
+
+  '@renseiai/agentfactory@0.8.2':
+    resolution: {integrity: sha512-gBywcjddtsvTvN+XovP3Lh+jUv+bSSpEtMeqKLFAFuS58uVeirDrh9tPeQDgr2QWrwlXEcUxLZlN2xgQq3gkjg==}
+    engines: {node: '>=22.0.0'}
+
   '@rollup/rollup-android-arm-eabi@4.57.1':
     resolution: {integrity: sha512-A6ehUVSiSaaliTxai040ZpZ2zTevHYbvu/lDoeAteHI8QnaosIzm4qwtezfRg1jOYaUmnzLX1AOD6Z+UJjtifg==}
     cpu: [arm]
@@ -1352,38 +1384,6 @@ packages:
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
-
-  '@supaku/agentfactory-cli@0.7.58':
-    resolution: {integrity: sha512-aJTZTlY/JzQyq7nMqhY5orhLzE6xQUatG+Q6sXrgBCs7UUrTQ/aMP4J8yYD0hr31qDHF+xalXmfLBbMQ5jS+bQ==}
-    engines: {node: '>=22.0.0'}
-    hasBin: true
-
-  '@supaku/agentfactory-dashboard@0.7.58':
-    resolution: {integrity: sha512-GpzRzVom6RrhSD8wikQYDoS2dOi1rwl9sNgxKlwf/FzYJo93cxELh5rhX2SP+ftIMa1M3AgLJb7t6At4F97TzA==}
-    engines: {node: '>=22.0.0'}
-    peerDependencies:
-      next: '>=14.0.0'
-      react: '>=18.0.0'
-      react-dom: '>=18.0.0'
-      tailwindcss: '>=3.4.0'
-
-  '@supaku/agentfactory-linear@0.7.58':
-    resolution: {integrity: sha512-YFP8NQrSodL+HhKR5Xp8FjLmMrVt/l7qeaUwJBFixePmSj6eCwCUZHcOAAnd1C00Fh85IHXcL9I/WhaHfC79wA==}
-    engines: {node: '>=22.0.0'}
-
-  '@supaku/agentfactory-nextjs@0.7.58':
-    resolution: {integrity: sha512-4SxSdVH70LYzy2JmpgmW81B2HIodh6qBFihICqV5mEfzhLLkEaCk06WXiKNm2/EXMRdr71c3dEvzVGNupUDuZQ==}
-    engines: {node: '>=22.0.0'}
-    peerDependencies:
-      next: '>=14.0.0'
-
-  '@supaku/agentfactory-server@0.7.58':
-    resolution: {integrity: sha512-lJcKnN8hjQctQPo06Rmd9h+tskpTfZDPwayi/LoM1oOuRNz5w3DqpiaPEobw1qROUeZsR9fSKlzbDqGO8fRTEw==}
-    engines: {node: '>=22.0.0'}
-
-  '@supaku/agentfactory@0.7.58':
-    resolution: {integrity: sha512-Ix3jmSFeQpZtvTatyS9+jXZVqTWhbB0/QRc70X/GaII6rnKKJQYaaO0v6N+FpEo75VTysIgV0GHI95czVD0F7Q==}
-    engines: {node: '>=22.0.0'}
 
   '@swc/helpers@0.5.15':
     resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
@@ -4296,6 +4296,74 @@ snapshots:
 
   '@radix-ui/rect@1.1.1': {}
 
+  '@renseiai/agentfactory-cli@0.8.2(graphql@16.12.0)':
+    dependencies:
+      '@renseiai/agentfactory': 0.8.2(graphql@16.12.0)
+      '@renseiai/agentfactory-linear': 0.8.2(graphql@16.12.0)
+      '@renseiai/agentfactory-server': 0.8.2(graphql@16.12.0)
+      dotenv: 17.3.1
+    transitivePeerDependencies:
+      - graphql
+      - supports-color
+
+  '@renseiai/agentfactory-dashboard@0.8.2(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)':
+    dependencies:
+      '@radix-ui/react-dialog': 1.1.15(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      '@radix-ui/react-dropdown-menu': 2.1.16(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      '@radix-ui/react-scroll-area': 1.2.10(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      '@radix-ui/react-separator': 1.1.8(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      '@radix-ui/react-slot': 1.2.4(@types/react@19.2.14)(react@19.2.1)
+      '@radix-ui/react-tabs': 1.1.13(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      '@radix-ui/react-tooltip': 1.2.8(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      class-variance-authority: 0.7.1
+      clsx: 2.1.1
+      lucide-react: 0.400.0(react@19.2.1)
+      next: 16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      react: 19.2.1
+      react-dom: 19.2.1(react@19.2.1)
+      swr: 2.4.1(react@19.2.1)
+      tailwind-merge: 2.6.1
+      tailwindcss: 4.1.18
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
+
+  '@renseiai/agentfactory-linear@0.8.2(graphql@16.12.0)':
+    dependencies:
+      '@linear/sdk': 70.0.0(graphql@16.12.0)
+    transitivePeerDependencies:
+      - graphql
+
+  '@renseiai/agentfactory-nextjs@0.8.2(graphql@16.12.0)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))':
+    dependencies:
+      '@renseiai/agentfactory': 0.8.2(graphql@16.12.0)
+      '@renseiai/agentfactory-linear': 0.8.2(graphql@16.12.0)
+      '@renseiai/agentfactory-server': 0.8.2(graphql@16.12.0)
+      next: 16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+    transitivePeerDependencies:
+      - graphql
+      - supports-color
+
+  '@renseiai/agentfactory-server@0.8.2(graphql@16.12.0)':
+    dependencies:
+      '@renseiai/agentfactory': 0.8.2(graphql@16.12.0)
+      '@renseiai/agentfactory-linear': 0.8.2(graphql@16.12.0)
+      ioredis: 5.9.3
+    transitivePeerDependencies:
+      - graphql
+      - supports-color
+
+  '@renseiai/agentfactory@0.8.2(graphql@16.12.0)':
+    dependencies:
+      '@anthropic-ai/claude-agent-sdk': 0.2.76(zod@4.3.6)
+      '@renseiai/agentfactory-linear': 0.8.2(graphql@16.12.0)
+      dotenv: 17.3.1
+      handlebars: 4.7.8
+      yaml: 2.8.2
+      zod: 4.3.6
+    transitivePeerDependencies:
+      - graphql
+
   '@rollup/rollup-android-arm-eabi@4.57.1':
     optional: true
 
@@ -4372,74 +4440,6 @@ snapshots:
     optional: true
 
   '@rtsao/scc@1.1.0': {}
-
-  '@supaku/agentfactory-cli@0.7.58(graphql@16.12.0)':
-    dependencies:
-      '@supaku/agentfactory': 0.7.58(graphql@16.12.0)
-      '@supaku/agentfactory-linear': 0.7.58(graphql@16.12.0)
-      '@supaku/agentfactory-server': 0.7.58(graphql@16.12.0)
-      dotenv: 17.3.1
-    transitivePeerDependencies:
-      - graphql
-      - supports-color
-
-  '@supaku/agentfactory-dashboard@0.7.58(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)':
-    dependencies:
-      '@radix-ui/react-dialog': 1.1.15(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      '@radix-ui/react-dropdown-menu': 2.1.16(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      '@radix-ui/react-scroll-area': 1.2.10(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      '@radix-ui/react-separator': 1.1.8(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      '@radix-ui/react-slot': 1.2.4(@types/react@19.2.14)(react@19.2.1)
-      '@radix-ui/react-tabs': 1.1.13(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      '@radix-ui/react-tooltip': 1.2.8(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      class-variance-authority: 0.7.1
-      clsx: 2.1.1
-      lucide-react: 0.400.0(react@19.2.1)
-      next: 16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      react: 19.2.1
-      react-dom: 19.2.1(react@19.2.1)
-      swr: 2.4.1(react@19.2.1)
-      tailwind-merge: 2.6.1
-      tailwindcss: 4.1.18
-    transitivePeerDependencies:
-      - '@types/react'
-      - '@types/react-dom'
-
-  '@supaku/agentfactory-linear@0.7.58(graphql@16.12.0)':
-    dependencies:
-      '@linear/sdk': 70.0.0(graphql@16.12.0)
-    transitivePeerDependencies:
-      - graphql
-
-  '@supaku/agentfactory-nextjs@0.7.58(graphql@16.12.0)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))':
-    dependencies:
-      '@supaku/agentfactory': 0.7.58(graphql@16.12.0)
-      '@supaku/agentfactory-linear': 0.7.58(graphql@16.12.0)
-      '@supaku/agentfactory-server': 0.7.58(graphql@16.12.0)
-      next: 16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-    transitivePeerDependencies:
-      - graphql
-      - supports-color
-
-  '@supaku/agentfactory-server@0.7.58(graphql@16.12.0)':
-    dependencies:
-      '@supaku/agentfactory': 0.7.58(graphql@16.12.0)
-      '@supaku/agentfactory-linear': 0.7.58(graphql@16.12.0)
-      ioredis: 5.9.3
-    transitivePeerDependencies:
-      - graphql
-      - supports-color
-
-  '@supaku/agentfactory@0.7.58(graphql@16.12.0)':
-    dependencies:
-      '@anthropic-ai/claude-agent-sdk': 0.2.76(zod@4.3.6)
-      '@supaku/agentfactory-linear': 0.7.58(graphql@16.12.0)
-      dotenv: 17.3.1
-      handlebars: 4.7.8
-      yaml: 2.8.2
-      zod: 4.3.6
-    transitivePeerDependencies:
-      - graphql
 
   '@swc/helpers@0.5.15':
     dependencies:
