@@ -21,7 +21,7 @@
     "sync-routes": "af-sync-routes",
     "sync-routes:dry": "af-sync-routes --dry-run",
     "sync-routes:pages": "af-sync-routes --pages",
-    "bump:af": "pnpm update @renseiai/agentfactory @renseiai/agentfactory-cli @renseiai/agentfactory-dashboard @renseiai/plugin-linear @renseiai/agentfactory-code-intelligence @renseiai/agentfactory-mcp-server @renseiai/agentfactory-nextjs @renseiai/agentfactory-server --latest",
+    "bump:af": "pnpm update @renseiai/agentfactory @renseiai/agentfactory-cli @renseiai/agentfactory-dashboard @renseiai/plugin-linear @renseiai/agentfactory-code-intelligence @renseiai/agentfactory-mcp-server @renseiai/agentfactory-nextjs @renseiai/agentfactory-server --latest --recursive",
     "prepare": "dotenvx ext precommit --install"
   },
   "dependencies": {
