@@ -36,13 +36,13 @@
         "name": "Claude AgentFleet #1",
         "color": "terminal.ansiBrightGreen",
         "icon": "squirrel",
-        "commands": ["tmux new-session -A -s claude-agentfleet-1 'claude --permission-mode acceptEdits; exec zsh'"],
+        "commands": ["tmux new-session -A -s claude-agentfleet-1 'claude --dangerously-skip-permissions; exec zsh'"],
       },
       {
         "name": "Claude AgentFleet #2",
         "color": "terminal.ansiBrightGreen",
         "icon": "squirrel",
-        "commands": ["tmux new-session -A -s claude-agentfleet-2 'claude --permission-mode acceptEdits; exec zsh'"],
+        "commands": ["tmux new-session -A -s claude-agentfleet-2 'claude --dangerously-skip-permissions; exec zsh'"],
       },
     ],
     "terminal.integrated.profiles.osx": {
