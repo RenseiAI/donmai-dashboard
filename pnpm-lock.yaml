@@ -9,29 +9,29 @@ importers:
   .:
     dependencies:
       '@renseiai/agentfactory':
-        specifier: ^0.8.17
-        version: 0.8.17
+        specifier: ^0.8.18
+        version: 0.8.18
       '@renseiai/agentfactory-cli':
-        specifier: ^0.8.17
-        version: 0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
+        specifier: ^0.8.18
+        version: 0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
       '@renseiai/agentfactory-code-intelligence':
-        specifier: ^0.8.17
-        version: 0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(zod@4.3.6)
+        specifier: ^0.8.18
+        version: 0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(zod@4.3.6)
       '@renseiai/agentfactory-dashboard':
-        specifier: ^0.8.17
-        version: 0.8.17(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)
+        specifier: ^0.8.18
+        version: 0.8.18(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)
       '@renseiai/agentfactory-mcp-server':
-        specifier: ^0.8.17
-        version: 0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)
+        specifier: ^0.8.18
+        version: 0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)
       '@renseiai/agentfactory-nextjs':
-        specifier: ^0.8.17
-        version: 0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(@renseiai/plugin-linear@0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6))(graphql@16.12.0)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(zod@4.3.6)
+        specifier: ^0.8.18
+        version: 0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(@renseiai/plugin-linear@0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6))(graphql@16.12.0)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(zod@4.3.6)
       '@renseiai/agentfactory-server':
-        specifier: ^0.8.17
-        version: 0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
+        specifier: ^0.8.18
+        version: 0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
       '@renseiai/plugin-linear':
-        specifier: ^0.8.17
-        version: 0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
+        specifier: ^0.8.18
+        version: 0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
       ioredis:
         specifier: ^5.4.1
         version: 5.9.3
@@ -1234,13 +1234,13 @@ packages:
   '@radix-ui/rect@1.1.1':
     resolution: {integrity: sha512-HPwpGIzkl28mWyZqG52jiqDJ12waP11Pa1lGoiyUkIEuMLBP0oeK/C89esbXrxsky5we7dfd8U58nm0SgAWpVw==}
 
-  '@renseiai/agentfactory-cli@0.8.17':
-    resolution: {integrity: sha512-y+2l6gD+Q39/+/317/a8ADmQ2ozfJmxM/XnmDmbRB/MTw5QALvkbqpBVG5SutYnemRB9YBC7WusSmAJAYm8+VA==}
+  '@renseiai/agentfactory-cli@0.8.18':
+    resolution: {integrity: sha512-PPFUzIiluqMNwxct3HcXF0X+tASbEvPFSL3MPNV/5OkOSaY/ZCh13/8jUu6/ab6rZ766L4XMkSH+eV39elDhgg==}
     engines: {node: '>=22.0.0'}
     hasBin: true
 
-  '@renseiai/agentfactory-code-intelligence@0.8.17':
-    resolution: {integrity: sha512-NsclgejKRjobRyBH+zKlQrtNYeXEAlWUPbBvGkFSZlrx1Vhznd7I7ooCfeekoXJajuEA7VDm5TibY9Y5TgHzMw==}
+  '@renseiai/agentfactory-code-intelligence@0.8.18':
+    resolution: {integrity: sha512-JsjYj6rvnSldXK0YFFI2XSbdbXOK7GpnkoE8zsq+lS+iqn15wj1EMORDPNqo44zuSM0+pL5Ga/e2CeLLcG++/g==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       '@anthropic-ai/claude-agent-sdk': ^0.2.7
@@ -1251,8 +1251,8 @@ packages:
       zod:
         optional: true
 
-  '@renseiai/agentfactory-dashboard@0.8.17':
-    resolution: {integrity: sha512-iIjkpzEOLlswz/IIZK2VIW8zAgWL+Ptdb0ajWEqVaSGL4xlrgq0foEjwcYtZd1cFIxLUiwH7qPCWC/AqUD6UjA==}
+  '@renseiai/agentfactory-dashboard@0.8.18':
+    resolution: {integrity: sha512-nVKBGBZBYduV3vGtw/mPdT14J7mXqSdKFw/EhGXG6KcS+NEikHs9XpkcytEH1XdMCSsJPGoVrn/fjaVb9WPrTw==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       next: '>=14.0.0'
@@ -1260,28 +1260,28 @@ packages:
       react-dom: '>=18.0.0'
       tailwindcss: '>=3.4.0'
 
-  '@renseiai/agentfactory-mcp-server@0.8.17':
-    resolution: {integrity: sha512-P42WyTzF34QypWiAnmvefTQuQ1HSwmnII/ttP+voxiIg90kzw8OJzz4MKCT9X6YVjSryk4/q/kkLzZPJJdPUfQ==}
+  '@renseiai/agentfactory-mcp-server@0.8.18':
+    resolution: {integrity: sha512-R9iqHal7AdS0tp+6C35/0f2trQuQxT8rjKSSVDXeJSR3lD8om4ibBkAQYEYFMON1PvokwhYIs+r6jAO5j0Fdgg==}
     engines: {node: '>=22.0.0'}
     hasBin: true
 
-  '@renseiai/agentfactory-nextjs@0.8.17':
-    resolution: {integrity: sha512-BH9599rZVnhTSNbCkRXXPNP6IwoXj/bBMgUqTX1K1XCMGK6RpXnB31NSfKU8hda3XQdbxk5dnirs0yYdLFdQjQ==}
+  '@renseiai/agentfactory-nextjs@0.8.18':
+    resolution: {integrity: sha512-v+h0zoTjjt9lItXNkH/FjfKikPweEQFJCRXryetYLb+QTmxNTRrpPUUqBKF40kazfIWDviYIVMpRf/bG8dnfSg==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
-      '@renseiai/plugin-linear': 0.8.17
+      '@renseiai/plugin-linear': 0.8.18
       next: '>=14.0.0'
 
-  '@renseiai/agentfactory-server@0.8.17':
-    resolution: {integrity: sha512-ERkxHg0jBs8Io6IdghBcUgd7EEHipFSJwIKuNXu3kGGIOlEPhnRBqOn0HWAHjymc7DSRshv3GsOd8wiSwF3tRA==}
+  '@renseiai/agentfactory-server@0.8.18':
+    resolution: {integrity: sha512-ehhE574TSnoMkBPGvyc6RXcy5mW5dwBPxAHUZ6/ACb6D7ChJqFkx7GOeUjz4NSDFckgjfZ1SOVCQeKqjhre7Bg==}
     engines: {node: '>=22.0.0'}
 
-  '@renseiai/agentfactory@0.8.17':
-    resolution: {integrity: sha512-WdLs0y8fqr872n0LTUs3PA5AAdqcksL8Cpzq7Bqu98EMc7ELKBIh9cjVD/TaFWDNLp/aMAFWPW/R1zFxFGMd+A==}
+  '@renseiai/agentfactory@0.8.18':
+    resolution: {integrity: sha512-GHePRcffaQzb1Dd0eAdsCqwNYDTAYlW7SlgnOMnDPWqVV4ZHCYDhjZ+s/2rQj+EonRqW59Zm+B1jfEX6jZKhgQ==}
     engines: {node: '>=22.0.0'}
 
-  '@renseiai/plugin-linear@0.8.17':
-    resolution: {integrity: sha512-wHd5Cim6HdRdm7djyTG8grPKrCAOUOlCxvODiDLVKb6VRdIuWakwbYaJFsjMrSXtuKe2ns79SG6SIowXLAd7XA==}
+  '@renseiai/plugin-linear@0.8.18':
+    resolution: {integrity: sha512-SW0yE7XRar9+EP/xs82E/MhfMLSAJWmhXMUnFULigTZVZ0YyUh+mciZVvQiytMQ7my/BDSjm6T5BKE1xOwJ10g==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       '@anthropic-ai/claude-agent-sdk': ^0.2.7
@@ -3645,10 +3645,10 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  zod-to-json-schema@3.25.1:
-    resolution: {integrity: sha512-pM/SU9d3YAggzi6MtR4h7ruuQlqKtad8e9S0fmxcMi+ueAK5Korys/aWcV9LIIHTVbj01NdzxcnXSN+O74ZIVA==}
+  zod-to-json-schema@3.25.2:
+    resolution: {integrity: sha512-O/PgfnpT1xKSDeQYSCfRI5Gy3hPf91mKVDuYLUHZJMiDFptvP41MSnWofm8dnCm0256ZNfZIM7DSzuSMAFnjHA==}
     peerDependencies:
-      zod: ^3.25 || ^4
+      zod: ^3.25.28 || ^4
 
   zod-validation-error@4.0.2:
     resolution: {integrity: sha512-Q6/nZLe6jxuU80qb/4uJ4t5v2VEZ44lzQjPDhYJNztRQ4wyWc6VF3D3Kb/fAuPetZQnhS3hnajCf9CsWesghLQ==}
@@ -4191,7 +4191,7 @@ snapshots:
       pkce-challenge: 5.0.1
       raw-body: 3.0.2
       zod: 4.3.6
-      zod-to-json-schema: 3.25.1(zod@4.3.6)
+      zod-to-json-schema: 3.25.2(zod@4.3.6)
     transitivePeerDependencies:
       - supports-color
 
@@ -4609,28 +4609,28 @@ snapshots:
 
   '@radix-ui/rect@1.1.1': {}
 
-  '@renseiai/agentfactory-cli@0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)':
+  '@renseiai/agentfactory-cli@0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)':
     dependencies:
-      '@renseiai/agentfactory': 0.8.17
-      '@renseiai/agentfactory-server': 0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
-      '@renseiai/plugin-linear': 0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
+      '@renseiai/agentfactory': 0.8.18
+      '@renseiai/agentfactory-server': 0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
+      '@renseiai/plugin-linear': 0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
       dotenv: 17.3.1
     optionalDependencies:
-      '@renseiai/agentfactory-code-intelligence': 0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(zod@4.3.6)
+      '@renseiai/agentfactory-code-intelligence': 0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(zod@4.3.6)
     transitivePeerDependencies:
       - '@anthropic-ai/claude-agent-sdk'
       - graphql
       - supports-color
       - zod
 
-  '@renseiai/agentfactory-code-intelligence@0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(zod@4.3.6)':
+  '@renseiai/agentfactory-code-intelligence@0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(zod@4.3.6)':
     dependencies:
       xxhash-wasm: 1.1.0
     optionalDependencies:
       '@anthropic-ai/claude-agent-sdk': 0.2.85(zod@4.3.6)
       zod: 4.3.6
 
-  '@renseiai/agentfactory-dashboard@0.8.17(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)':
+  '@renseiai/agentfactory-dashboard@0.8.18(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)':
     dependencies:
       '@radix-ui/react-dialog': 1.1.15(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       '@radix-ui/react-dropdown-menu': 2.1.16(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -4652,10 +4652,10 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@renseiai/agentfactory-mcp-server@0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)':
+  '@renseiai/agentfactory-mcp-server@0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)':
     dependencies:
       '@modelcontextprotocol/sdk': 1.28.0(zod@4.3.6)
-      '@renseiai/agentfactory-server': 0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
+      '@renseiai/agentfactory-server': 0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
       zod: 4.3.6
     transitivePeerDependencies:
       - '@anthropic-ai/claude-agent-sdk'
@@ -4663,11 +4663,11 @@ snapshots:
       - graphql
       - supports-color
 
-  '@renseiai/agentfactory-nextjs@0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(@renseiai/plugin-linear@0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6))(graphql@16.12.0)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(zod@4.3.6)':
+  '@renseiai/agentfactory-nextjs@0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(@renseiai/plugin-linear@0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6))(graphql@16.12.0)(next@16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(zod@4.3.6)':
     dependencies:
-      '@renseiai/agentfactory': 0.8.17
-      '@renseiai/agentfactory-server': 0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
-      '@renseiai/plugin-linear': 0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
+      '@renseiai/agentfactory': 0.8.18
+      '@renseiai/agentfactory-server': 0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
+      '@renseiai/plugin-linear': 0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
       next: 16.1.1(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       yaml: 2.8.3
     transitivePeerDependencies:
@@ -4676,10 +4676,10 @@ snapshots:
       - supports-color
       - zod
 
-  '@renseiai/agentfactory-server@0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)':
+  '@renseiai/agentfactory-server@0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)':
     dependencies:
-      '@renseiai/agentfactory': 0.8.17
-      '@renseiai/plugin-linear': 0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
+      '@renseiai/agentfactory': 0.8.18
+      '@renseiai/plugin-linear': 0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
       ioredis: 5.9.3
     transitivePeerDependencies:
       - '@anthropic-ai/claude-agent-sdk'
@@ -4687,7 +4687,7 @@ snapshots:
       - supports-color
       - zod
 
-  '@renseiai/agentfactory@0.8.17':
+  '@renseiai/agentfactory@0.8.18':
     dependencies:
       '@anthropic-ai/claude-agent-sdk': 0.2.85(zod@4.3.6)
       dotenv: 17.3.1
@@ -4695,9 +4695,10 @@ snapshots:
       yaml: 2.8.3
       zod: 4.3.6
 
-  '@renseiai/plugin-linear@0.8.17(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)':
+  '@renseiai/plugin-linear@0.8.18(@anthropic-ai/claude-agent-sdk@0.2.85(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)':
     dependencies:
       '@linear/sdk': 70.0.0(graphql@16.12.0)
+      '@renseiai/agentfactory': 0.8.18
     optionalDependencies:
       '@anthropic-ai/claude-agent-sdk': 0.2.85(zod@4.3.6)
       zod: 4.3.6
@@ -7296,7 +7297,7 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zod-to-json-schema@3.25.1(zod@4.3.6):
+  zod-to-json-schema@3.25.2(zod@4.3.6):
     dependencies:
       zod: 4.3.6
 
