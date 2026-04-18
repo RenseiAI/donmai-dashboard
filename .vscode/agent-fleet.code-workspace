@@ -24,7 +24,7 @@
         "name": "AgentFleet Governor",
         "color": "terminal.ansiWhite",
         "icon": "robot",
-        "commands": ["tmux kill-session -t agentfleet-govenor 2>/dev/null; tmux new-session -s agentfleet-govenor 'pnpm governor; exec zsh'"],
+        "commands": ["tmux kill-session -t agentfleet-govenor 2>/dev/null; tmux new-session -s agentfleet-govenor 'af-governor; exec zsh'"],
       },
       {
         "name": "AgentFleet Dashboard",

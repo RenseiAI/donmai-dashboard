@@ -17,7 +17,7 @@ agent-fleet/
 └── .claude/agents/        # Agent definitions (developer.md)
 ```
 
-All route handlers, dashboard UI, middleware, worker logic, and CLI tools come from AgentFactory packages. CLI commands (`af-worker`, `af-governor`, etc.) are provided by `@renseiai/agentfactory-cli`. Only a few files in `src/lib/` contain custom deployment logic.
+All route handlers, dashboard UI, middleware, worker logic, and CLI tools come from AgentFactory packages. CLI commands (`af-worker`, `af-governor`, etc.) are globally installed at `/opt/homebrew/bin/`. Only a few files in `src/lib/` contain custom deployment logic.
 
 ## Build & Dev
 
@@ -53,9 +53,9 @@ The governor communicates with workers indirectly through the Redis work queue. 
 ### Running the Governor
 
 ```bash
-pnpm governor                  # Start in event-driven mode (default)
-pnpm governor:once             # Single scan pass and exit
-pnpm governor --mode poll-only # Poll-only mode (no event bus)
+af-governor                  # Start in event-driven mode (default)
+af-governor --once           # Single scan pass and exit
+af-governor --mode poll-only # Poll-only mode (no event bus)
 ```
 
 ### Governor CLI Options
@@ -103,9 +103,9 @@ Add these as Linear comments on any issue to override the governor:
 ## Workers
 
 ```bash
-pnpm worker           # Start a single worker
-pnpm worker-fleet     # Start worker fleet (uses WORKER_FLEET_SIZE)
-pnpm orchestrator     # Process backlog issues
+af-worker           # Start a single worker
+af-worker-fleet     # Start worker fleet (uses WORKER_FLEET_SIZE)
+af-orchestrator     # Process backlog issues
 ```
 
 ## Route Sync
@@ -113,28 +113,28 @@ pnpm orchestrator     # Process backlog issues
 When AgentFactory packages are updated, new API routes or dashboard pages may be added. Use `af-sync-routes` to detect and scaffold any missing route files in `src/app/`.
 
 ```bash
-pnpm sync-routes:dry     # Preview what would be created (no changes)
-pnpm sync-routes         # Create missing route files
-pnpm sync-routes:pages   # Also sync dashboard page.tsx files
+af-sync-routes --dry-run   # Preview what would be created (no changes)
+af-sync-routes             # Create missing route files
+af-sync-routes --pages     # Also sync dashboard page.tsx files
 ```
 
 Recommended after every package bump:
 
 ```bash
-pnpm bump:af && pnpm sync-routes --pages
+pnpm bump:af && af-sync-routes --pages
 ```
 
 ## Admin Tools
 
 ```bash
-pnpm queue-admin list          # List queued work
-pnpm queue-admin sessions      # List sessions
-pnpm queue-admin workers       # List workers
-pnpm queue-admin clear-queue   # Clear work queue
-pnpm queue-admin reset         # Reset everything
-pnpm analyze-logs              # Analyze session logs
-pnpm analyze-logs --follow     # Watch for new sessions
-pnpm cleanup                   # Clean up stale sessions
+af-queue-admin list          # List queued work
+af-queue-admin sessions      # List sessions
+af-queue-admin workers       # List workers
+af-queue-admin clear-queue   # Clear work queue
+af-queue-admin reset         # Reset everything
+af-analyze-logs              # Analyze session logs
+af-analyze-logs --follow     # Watch for new sessions
+af-cleanup                   # Clean up stale sessions
 ```
 
 ## Key Customization Points
