@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@source "../../node_modules/@renseiai/agentfactory-dashboard/src";
+@source "../../node_modules/@donmai/dashboard/src";
 
 @plugin "@tailwindcss/typography";
 @plugin "tailwindcss-animate";
@@ -34,18 +34,26 @@
   --color-warning: hsl(var(--warning));
   --color-error: hsl(var(--error));
 
-  /* AgentFactory dashboard colors */
-  --color-af-bg-primary: #0A0E1A;
-  --color-af-bg-secondary: #111827;
-  --color-af-surface: #1A1F2E;
-  --color-af-surface-border: #2A3040;
-  --color-af-accent: #FF6B35;
-  --color-af-status-success: #22C55E;
-  --color-af-status-warning: #F59E0B;
-  --color-af-status-error: #EF4444;
-  --color-af-text-primary: #F9FAFB;
-  --color-af-text-secondary: #9CA3AF;
-  --color-af-code: #A5B4FC;
+  /* Donmai brand colors */
+  --donmai-accent: #D94F2A;
+  --donmai-bright: #E5613B;
+  --donmai-hot:    #F07D5E;
+  --donmai-dim:    #A83820;
+  --donmai-glow:   rgba(217,79,42,0.15);
+  --donmai-ember:  rgba(217,79,42,0.08);
+
+  /* Donmai dashboard surface/status colors */
+  --color-donmai-bg-primary: #0A0E1A;
+  --color-donmai-bg-secondary: #111827;
+  --color-donmai-surface: #1A1F2E;
+  --color-donmai-surface-border: #2A3040;
+  --color-donmai-accent: var(--donmai-accent);
+  --color-donmai-status-success: #22C55E;
+  --color-donmai-status-warning: #F59E0B;
+  --color-donmai-status-error: #EF4444;
+  --color-donmai-text-primary: #F9FAFB;
+  --color-donmai-text-secondary: #9CA3AF;
+  --color-donmai-code: #A5B4FC;
 
   --font-sans: 'Inter', 'Geist Sans', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'Geist Mono', ui-monospace, monospace;
