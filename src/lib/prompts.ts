@@ -1,11 +1,11 @@
 /**
  * Deployment-Specific Prompt Templates & Work Type Detection
  *
- * Delegates prompt generation and work type detection to @renseiai/agentfactory-linear
+ * Delegates prompt generation and work type detection to @donmai/plugin-linear
  * defaults, with deployment-specific keyword extensions and helper functions.
  *
  * IMPORTANT: Do NOT fork prompt generation here. The canonical prompts live in
- * @renseiai/agentfactory-linear's defaultGeneratePrompt. Bumping the package
+ * @donmai/plugin-linear's defaultGeneratePrompt. Bumping the package
  * version is all that's needed to pick up prompt changes.
  */
 
@@ -15,13 +15,13 @@ import {
   defaultGetPriority,
   defaultBuildParentQAContext,
   defaultBuildParentAcceptanceContext,
-} from '@renseiai/agentfactory-linear'
-import type { AgentWorkType, SubIssueStatus, WorkflowContext } from '@renseiai/agentfactory-linear'
+} from '@donmai/plugin-linear'
+import type { AgentWorkType, SubIssueStatus, WorkflowContext } from '@donmai/plugin-linear'
 
 /**
  * Generate the appropriate prompt for a work type.
  *
- * Delegates to the canonical defaultGeneratePrompt from @renseiai/agentfactory-linear.
+ * Delegates to the canonical defaultGeneratePrompt from @donmai/plugin-linear.
  */
 export function generatePromptForWorkType(
   identifier: string,
@@ -35,7 +35,7 @@ export function generatePromptForWorkType(
 /**
  * Detect work type from prompt, constrained to valid options for the current status.
  *
- * Delegates to the canonical defaultDetectWorkTypeFromPrompt from @renseiai/agentfactory-linear.
+ * Delegates to the canonical defaultDetectWorkTypeFromPrompt from @donmai/plugin-linear.
  */
 export function detectWorkTypeFromPrompt(
   prompt: string,
@@ -47,7 +47,7 @@ export function detectWorkTypeFromPrompt(
 /**
  * Get priority for work type (lower = higher priority).
  *
- * Delegates to the canonical defaultGetPriority from @renseiai/agentfactory-linear.
+ * Delegates to the canonical defaultGetPriority from @donmai/plugin-linear.
  */
 export function getPriorityForWorkType(workType: AgentWorkType): number {
   return defaultGetPriority(workType)
@@ -56,7 +56,7 @@ export function getPriorityForWorkType(workType: AgentWorkType): number {
 /**
  * Build enriched QA prompt context for parent issues with sub-issues.
  *
- * Delegates to the canonical defaultBuildParentQAContext from @renseiai/agentfactory-linear.
+ * Delegates to the canonical defaultBuildParentQAContext from @donmai/plugin-linear.
  */
 export function buildParentQAContext(
   issueIdentifier: string,
@@ -68,7 +68,7 @@ export function buildParentQAContext(
 /**
  * Build enriched acceptance prompt context for parent issues with sub-issues.
  *
- * Delegates to the canonical defaultBuildParentAcceptanceContext from @renseiai/agentfactory-linear.
+ * Delegates to the canonical defaultBuildParentAcceptanceContext from @donmai/plugin-linear.
  */
 export function buildParentAcceptanceContext(
   issueIdentifier: string,

@@ -47,7 +47,7 @@ const securityHeaders = [
 ]
 
 const nextConfig: NextConfig = {
-  transpilePackages: ['@renseiai/agentfactory-dashboard'],
+  transpilePackages: ['@donmai/dashboard'],
   allowedDevOrigins: ['127.0.0.1', 'localhost'],
   // reactCompiler requires babel-plugin-react-compiler; enable when needed
   // reactCompiler: true,
