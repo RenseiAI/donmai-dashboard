@@ -10,13 +10,14 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint .",
-    "bump:af": "pnpm update @renseiai/agentfactory-dashboard @renseiai/agentfactory-nextjs @renseiai/agentfactory-server --latest --recursive",
+    "bump:donmai": "pnpm update @donmai/dashboard @donmai/server @donmai/plugin-linear --latest --recursive",
     "prepare": "dotenvx ext precommit --install"
   },
   "dependencies": {
-    "@renseiai/agentfactory-dashboard": "^0.8.23",
-    "@renseiai/agentfactory-nextjs": "^0.8.23",
-    "@renseiai/agentfactory-server": "^0.8.23",
+    "@donmai/dashboard": "^0.9.0",
+    "@donmai/plugin-linear": "^0.9.0",
+    "@donmai/server": "^0.9.0",
+    "@renseiai/agentfactory-nextjs": "^0.8.66",
     "ioredis": "^5.4.1",
     "next": "16.2.6",
     "react": "19.2.1",

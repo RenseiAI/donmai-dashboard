@@ -1,23 +1,23 @@
-# Agent Fleet — Rensei AI Deployment
+# Donmai Dashboard — Rensei AI Deployment
 
-Standalone private deployment of [AgentFactory](https://github.com/RenseiAI/agentfactory) for `agent.rensei.dev`.
+Standalone private deployment of [Donmai](https://github.com/RenseiAI/donmai-libraries) for `agent.rensei.dev` (redirecting to `donmai.dev/dashboard` post-Wave 8).
 
-This is a **deployment repo**, not a library. It consumes AgentFactory packages from npm and adds deployment-specific configuration.
+This is a **deployment repo**, not a library. It consumes Donmai packages from npm and adds deployment-specific configuration.
 
 ## Architecture
 
 ```
-agent-fleet/
+donmai-dashboard/  (repo: agent-fleet, renaming to donmai-dashboard post-Wave 5)
 ├── src/lib/
 │   ├── config.ts          # Route wiring (connects prompts → route factories)
 │   ├── prompts.ts         # Work type keywords, prompt templates, auto-trigger config
 │   ├── orchestrator.ts    # Webhook orchestrator with agent-worked marking
 │   └── governor-setup.ts  # Governor event bus bridge (webhook → Redis Stream)
-├── src/app/               # Next.js routes (re-exports from @renseiai/agentfactory-nextjs)
+├── src/app/               # Next.js routes (route factories from @renseiai/agentfactory-nextjs)
 └── .claude/agents/        # Agent definitions (developer.md)
 ```
 
-All route handlers, dashboard UI, middleware, worker logic, and CLI tools come from AgentFactory packages. CLI commands (`af-worker`, `af-governor`, etc.) are globally installed at `/opt/homebrew/bin/`. Only a few files in `src/lib/` contain custom deployment logic.
+All route handlers, dashboard UI, middleware, worker logic, and CLI tools come from Donmai packages. CLI commands (`donmai worker`, `donmai governor`, etc.) are available via the `donmai` binary. Only a few files in `src/lib/` contain custom deployment logic.
 
 ## Build & Dev
 
@@ -48,14 +48,14 @@ Webhooks (Vercel) ──► Redis Stream (governor:events)
                     Redis Work Queue ◄── Workers pick up work via HTTP API
 ```
 
-The governor communicates with workers indirectly through the Redis work queue. It writes work items; workers poll the HTTP API (`agent.rensei.dev`) which dequeues from Redis. The governor does not need to be co-located with workers.
+The governor communicates with workers indirectly through the Redis work queue. It writes work items; workers poll the HTTP API (`donmai.dev/dashboard`) which dequeues from Redis. The governor does not need to be co-located with workers.
 
 ### Running the Governor
 
 ```bash
-af-governor                  # Start in event-driven mode (default)
-af-governor --once           # Single scan pass and exit
-af-governor --mode poll-only # Poll-only mode (no event bus)
+donmai governor              # Start in event-driven mode (default)
+donmai governor --once       # Single scan pass and exit
+donmai governor --mode poll-only  # Poll-only mode (no event bus)
 ```
 
 ### Governor CLI Options
@@ -87,7 +87,7 @@ Controls how webhooks interact with the governor:
 
 The governor scans all projects across both worker pools:
 
-- **agentfactory workers**: Agent, Agent Fleet
+- **donmai workers**: Agent, Agent Fleet
 - **supaku workers**: Social, Family, Art, Account, Marketing
 
 Set via `GOVERNOR_PROJECTS` env var (comma-separated).
@@ -103,38 +103,38 @@ Add these as Linear comments on any issue to override the governor:
 ## Workers
 
 ```bash
-af-worker           # Start a single worker
-af-worker-fleet     # Start worker fleet (uses WORKER_FLEET_SIZE)
-af-orchestrator     # Process backlog issues
+donmai worker           # Start a single worker
+donmai worker fleet     # Start worker fleet (uses WORKER_FLEET_SIZE)
+donmai orchestrator     # Process backlog issues
 ```
 
 ## Route Sync
 
-When AgentFactory packages are updated, new API routes or dashboard pages may be added. Use `af-sync-routes` to detect and scaffold any missing route files in `src/app/`.
+When Donmai packages are updated, new API routes or dashboard pages may be added. Use `donmai sync-routes` to detect and scaffold any missing route files in `src/app/`.
 
 ```bash
-af-sync-routes --dry-run   # Preview what would be created (no changes)
-af-sync-routes             # Create missing route files
-af-sync-routes --pages     # Also sync dashboard page.tsx files
+donmai sync-routes --dry-run   # Preview what would be created (no changes)
+donmai sync-routes             # Create missing route files
+donmai sync-routes --pages     # Also sync dashboard page.tsx files
 ```
 
 Recommended after every package bump:
 
 ```bash
-pnpm bump:af && af-sync-routes --pages
+pnpm bump:donmai && donmai sync-routes --pages
 ```
 
 ## Admin Tools
 
 ```bash
-af-queue-admin list          # List queued work
-af-queue-admin sessions      # List sessions
-af-queue-admin workers       # List workers
-af-queue-admin clear-queue   # Clear work queue
-af-queue-admin reset         # Reset everything
-af-analyze-logs              # Analyze session logs
-af-analyze-logs --follow     # Watch for new sessions
-af-cleanup                   # Clean up stale sessions
+donmai queue list          # List queued work
+donmai queue sessions      # List sessions
+donmai queue workers       # List workers
+donmai queue clear         # Clear work queue
+donmai queue reset         # Reset everything
+donmai logs analyze        # Analyze session logs
+donmai logs analyze --follow  # Watch for new sessions
+donmai cleanup             # Clean up stale sessions
 ```
 
 ## Key Customization Points
@@ -150,6 +150,7 @@ Copy `.env.example` to `.env.local` and fill in secrets. Key vars:
 - `LINEAR_ACCESS_TOKEN` / `LINEAR_API_KEY` — Linear API key for SDK operations
 - `LINEAR_WEBHOOK_SECRET` — Webhook signature verification
 - `REDIS_URL` — Required for distributed workers, session storage, and governor
+- `DONMAI_API_URL` — Donmai dashboard endpoint (canonical name; `WORKER_API_URL` is legacy fallback)
 - `WORKER_API_URL` / `WORKER_API_KEY` — Worker connection to this server
 - `ENABLE_AUTO_QA` / `ENABLE_AUTO_ACCEPTANCE` — Auto-trigger QA/acceptance workflows
 - `GOVERNOR_MODE` — `direct` (default), `event-bridge`, or `governor-only`
@@ -158,4 +159,9 @@ Copy `.env.example` to `.env.local` and fill in secrets. Key vars:
 
 ## Deployment
 
-Deployed to Vercel as `agent.rensei.dev`. Push to `main` to deploy.
+Deployed to Vercel. URL transitions:
+- Current: `agent.rensei.dev` (Vercel project: `supaku-agent`)
+- Post-Wave 8: `donmai.dev/dashboard` (repo renamed to `donmai-dashboard`)
+- `agent.rensei.dev` will 301-redirect to `donmai.dev/dashboard`
+
+Push to `main` to deploy.

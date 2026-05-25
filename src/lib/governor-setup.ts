@@ -8,7 +8,9 @@
  * The governor CLI process (cli/governor.ts) consumes from the same stream.
  */
 
-import { RedisEventBus } from '@renseiai/agentfactory-server'
+import { RedisEventBus } from '@donmai/server'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore -- @renseiai/agentfactory-nextjs deprecated; retained pending route-handler migration to @donmai/server
 import { setGovernorEventBus } from '@renseiai/agentfactory-nextjs'
 
 /**

@@ -47,7 +47,18 @@ const securityHeaders = [
 ]
 
 const nextConfig: NextConfig = {
-  transpilePackages: ['@renseiai/agentfactory-dashboard'],
+  transpilePackages: ['@donmai/dashboard'],
+  // Exclude server-side packages that use Node.js-only APIs (child_process spawn etc.)
+  // from Turbopack bundling. @donmai/core and @renseiai/agentfactory both contain
+  // stdio-server.js which uses spawn() — Turbopack can't resolve the dynamic entrypoint.
+  // NOTE: @renseiai/agentfactory-nextjs must NOT be external — it imports 'next/server'
+  // without .js extension which fails under Node.js native ESM resolution.
+  serverExternalPackages: [
+    '@donmai/core',
+    '@donmai/server',
+    '@renseiai/agentfactory',
+    '@renseiai/agentfactory-server',
+  ],
   allowedDevOrigins: ['127.0.0.1', 'localhost'],
   // reactCompiler requires babel-plugin-react-compiler; enable when needed
   // reactCompiler: true,

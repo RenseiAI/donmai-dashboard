@@ -1,10 +1,14 @@
 /**
- * Agentfactory Configuration — Central Route Wiring
+ * Donmai Configuration — Central Route Wiring
  *
  * Connects deployment-specific callbacks (prompt templates, work type detection,
- * Linear client resolution) to @renseiai/agentfactory-nextjs route factories.
+ * Linear client resolution) to route factories.
+ *
+ * TODO(donmai-rebrand): @renseiai/agentfactory-nextjs is deprecated (no @donmai/* successor).
+ * Route-handler logic should move into @donmai/server in a future wave.
  */
-
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore -- deprecated package retained pending route-handler migration to @donmai/server
 import { createAllRoutes, createDefaultLinearClientResolver } from '@renseiai/agentfactory-nextjs'
 import {
   generatePromptForWorkType,
