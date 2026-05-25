@@ -87,7 +87,7 @@ Controls how webhooks interact with the governor:
 
 The governor scans all projects across both worker pools:
 
-- **agentfactory workers**: Agent, Agent Fleet
+- **donmai workers**: Agent, Agent Fleet
 - **supaku workers**: Social, Family, Art, Account, Marketing
 
 Set via `GOVERNOR_PROJECTS` env var (comma-separated).
