@@ -8,15 +8,18 @@ importers:
 
   .:
     dependencies:
-      '@renseiai/agentfactory-dashboard':
-        specifier: ^0.8.23
-        version: 0.8.41(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)
+      '@donmai/dashboard':
+        specifier: ^0.9.0
+        version: 0.9.0(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)
+      '@donmai/plugin-linear':
+        specifier: ^0.9.0
+        version: 0.9.0(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
+      '@donmai/server':
+        specifier: ^0.9.0
+        version: 0.9.0(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
       '@renseiai/agentfactory-nextjs':
-        specifier: ^0.8.23
-        version: 0.8.41(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(@renseiai/plugin-linear@0.8.41(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6))(graphql@16.12.0)(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(zod@4.3.6)
-      '@renseiai/agentfactory-server':
-        specifier: ^0.8.23
-        version: 0.8.41(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
+        specifier: ^0.8.66
+        version: 0.8.66(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(@renseiai/plugin-linear@0.8.66(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6))(graphql@16.12.0)(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(zod@4.3.6)
       ioredis:
         specifier: ^5.4.1
         version: 5.9.3
@@ -170,6 +173,47 @@ packages:
   '@babel/types@7.29.0':
     resolution: {integrity: sha512-LwdZHpScM4Qz8Xw2iKSzS+cfglZzJGvofQICy7W7v4caru4EaAmyUuO6BGrbyQ2mYV11W0U8j5mBhd14dd3B0A==}
     engines: {node: '>=6.9.0'}
+
+  '@donmai/architectural-intelligence@0.9.0':
+    resolution: {integrity: sha512-bq/PkKdqh3AYKURQcb5O0fnwnelhl0Ikxu8sfau1yuxIPOphWNZqz03PxmcyDBMt4gmlt4VrzIJENA/0MsL+sQ==}
+    engines: {node: '>=22.0.0'}
+    peerDependencies:
+      drizzle-orm: '>=0.40.0'
+      postgres: '>=3.4.0'
+    peerDependenciesMeta:
+      drizzle-orm:
+        optional: true
+      postgres:
+        optional: true
+
+  '@donmai/core@0.9.0':
+    resolution: {integrity: sha512-bK2282+JJEHR5kbchUQGL9rHEo9EjmylLyMJ/RS3cK0ge4oM1XYTFL7a6pmk4+QbyJU74jz/pBoL4nJEVVh7Ww==}
+    engines: {node: '>=22.0.0'}
+
+  '@donmai/dashboard@0.9.0':
+    resolution: {integrity: sha512-TRDTZpc9nDii4voU7aZsi0BRp18Bzk4WuYuD2Trvkq9PNsxc0YheJ0Fa0PcGBoBWiyb2R2bm4/FV/HITnh1gxA==}
+    engines: {node: '>=22.0.0'}
+    peerDependencies:
+      next: '>=14.0.0'
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
+      tailwindcss: '>=3.4.0'
+
+  '@donmai/plugin-linear@0.9.0':
+    resolution: {integrity: sha512-i8st8i2b0uk9UC9/VLZG7YJ7sbKs2Xc1L1BHhGbxKM7pV6ggFmHss7Fq9pt7UverFLt9DmurjVQicNAmJrd+AQ==}
+    engines: {node: '>=22.0.0'}
+    peerDependencies:
+      '@anthropic-ai/claude-agent-sdk': ^0.2.7
+      zod: ^4.3.6
+    peerDependenciesMeta:
+      '@anthropic-ai/claude-agent-sdk':
+        optional: true
+      zod:
+        optional: true
+
+  '@donmai/server@0.9.0':
+    resolution: {integrity: sha512-EegJBAwfaLFz2rTAVuWemXdZXCHU2XFmgfjw4tYu/oLVu28G9Kqf2T7N+MtYvKMD7UGpd63t8uwQKWCSTjOo6A==}
+    engines: {node: '>=22.0.0'}
 
   '@dotenvx/dotenvx@1.52.0':
     resolution: {integrity: sha512-CaQcc8JvtzQhUSm9877b6V4Tb7HCotkcyud9X2YwdqtQKwgljkMRwU96fVYKnzN3V0Hj74oP7Es+vZ0mS+Aa1w==}
@@ -1076,33 +1120,40 @@ packages:
   '@radix-ui/rect@1.1.1':
     resolution: {integrity: sha512-HPwpGIzkl28mWyZqG52jiqDJ12waP11Pa1lGoiyUkIEuMLBP0oeK/C89esbXrxsky5we7dfd8U58nm0SgAWpVw==}
 
-  '@renseiai/agentfactory-dashboard@0.8.41':
-    resolution: {integrity: sha512-oNa1A6TRvgd5i7AokJA+i0VMT+NTpvegQ6dFVptIhAFe1yPBUlDoCClc5EX3i23aGOcc1mKlhWzvvT7fpt3Wlw==}
+  '@renseiai/agentfactory-nextjs@0.8.66':
+    resolution: {integrity: sha512-KLoi4PC3dFLdWBnPnLnS2QU1kkcwljtR2BHY5LuD9mlZ8cbVOZOH2MlfMh3igKI/NHuh/SDImWNMWiBpGqQC9Q==}
     engines: {node: '>=22.0.0'}
+    deprecated: Route-handler logic is now built into platform and @donmai/server. No direct successor package.
     peerDependencies:
-      next: '>=14.0.0'
-      react: '>=18.0.0'
-      react-dom: '>=18.0.0'
-      tailwindcss: '>=3.4.0'
-
-  '@renseiai/agentfactory-nextjs@0.8.41':
-    resolution: {integrity: sha512-N5w1l7/AJwyK4l4VP1Gc+TxCkcCD5Ddo095kMoYfC7PAyZdg6BA773SN7Hig/HdhwyyhY4Z6XiJj8w1JSV0CYg==}
-    engines: {node: '>=22.0.0'}
-    peerDependencies:
-      '@renseiai/plugin-linear': 0.8.41
+      '@renseiai/plugin-linear': 0.8.66
       next: '>=14.0.0'
 
-  '@renseiai/agentfactory-server@0.8.41':
-    resolution: {integrity: sha512-fLTnbuoz1IyFdXrtQeIu62fGoZq4QcfLxf3OyN9GoyWixb8dcm7wePiFSIsUlcT/0pV9qODY3E1k6u6VXTZPwQ==}
+  '@renseiai/agentfactory-server@0.8.66':
+    resolution: {integrity: sha512-Gh0BKCU8o7f5kMrYr2weR0Y73YFDCyfsEhRP45zNxr7vGnAsjPe3nu4GR6tnDwJuCEjYTyzpL8uDZHrUuDYJsw==}
     engines: {node: '>=22.0.0'}
+    deprecated: Renamed to @donmai/server. See https://donmai.dev/docs/migration.
 
-  '@renseiai/agentfactory@0.8.41':
-    resolution: {integrity: sha512-4qCvpKxhhndNTnNG7q+AeBrNCqbZsuQ6QgsPt1SinX6aElnIW781aZOBTZhvtbEM8pa2hoFBUC5lbDrBsutPUQ==}
+  '@renseiai/agentfactory@0.8.66':
+    resolution: {integrity: sha512-BEmzOae7f7LjBBBklTVzsPBeEmmN9lOsPQom3g71Fap2AXfASMRFYFlTkkujyxgpXKLfg2EbKbtShonPChOR5w==}
     engines: {node: '>=22.0.0'}
+    deprecated: Renamed to @donmai/core. See https://donmai.dev/docs/migration.
 
-  '@renseiai/plugin-linear@0.8.41':
-    resolution: {integrity: sha512-z6Jl11IomqTBqJtZzhLolY1ktraQFJRsZAV2EYnXqzzH20Vfdh5XpsweWIYSFTaRo38arQSai+19jwTLMDcFaw==}
+  '@renseiai/architectural-intelligence@0.8.66':
+    resolution: {integrity: sha512-pvubicETYc0YjqqimQxQ3Cl6Tds8ZARJDEbvna/DRpjvdAW4VkWXg7AgyvGU8yo7FWYOKyCnsnKt4CVb0+WhrA==}
     engines: {node: '>=22.0.0'}
+    peerDependencies:
+      drizzle-orm: '>=0.40.0'
+      postgres: '>=3.4.0'
+    peerDependenciesMeta:
+      drizzle-orm:
+        optional: true
+      postgres:
+        optional: true
+
+  '@renseiai/plugin-linear@0.8.66':
+    resolution: {integrity: sha512-rs1NEtQ1aGpUB0VYW1DQXDmy5zTQi4985XHJKENUS/vEBa7HBQq1s2SyTaJ4fQ4pfiecRJNAsdQpnIJ4JigOrw==}
+    engines: {node: '>=22.0.0'}
+    deprecated: Renamed to @donmai/plugin-linear. See https://donmai.dev/docs/migration.
     peerDependencies:
       '@anthropic-ai/claude-agent-sdk': ^0.2.7
       zod: ^4.3.6
@@ -1252,6 +1303,22 @@ packages:
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
+
+  '@sigstore/bundle@4.0.0':
+    resolution: {integrity: sha512-NwCl5Y0V6Di0NexvkTqdoVfmjTaQwoLM236r89KEojGmq/jMls8S+zb7yOwAPdXvbwfKDlP+lmXgAL4vKSQT+A==}
+    engines: {node: ^20.17.0 || >=22.9.0}
+
+  '@sigstore/core@3.2.1':
+    resolution: {integrity: sha512-qRsxPnCrbC/puegGxKuynfnxgLiHqWStrSjxkoB4YKqq3Z3s4cyZyj42ZdWFAEblNP65C+rBH8EuREHIXoi83g==}
+    engines: {node: ^20.17.0 || >=22.9.0}
+
+  '@sigstore/protobuf-specs@0.5.1':
+    resolution: {integrity: sha512-/ScWUhhoFasJsSRGTVBwId1loQjjnjAfE4djL6ZhrXRpNCmPTnUKF5Jokd58ILseOMjzET3UrMOtJPS9sYeI0g==}
+    engines: {node: ^18.17.0 || >=20.5.0}
+
+  '@sigstore/verify@3.1.0':
+    resolution: {integrity: sha512-mNe0Iigql08YupSOGv197YdHpPPr+EzDZmfCgMc7RPNaZTw5aLN01nBl6CHJOh3BGtnMIj83EeN4butBchc8Ag==}
+    engines: {node: ^20.17.0 || >=22.9.0}
 
   '@swc/helpers@0.5.15':
     resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
@@ -3601,6 +3668,74 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
 
+  '@donmai/architectural-intelligence@0.9.0': {}
+
+  '@donmai/core@0.9.0':
+    dependencies:
+      '@anthropic-ai/claude-agent-sdk': 0.2.87(zod@4.3.6)
+      '@donmai/architectural-intelligence': 0.9.0
+      '@modelcontextprotocol/sdk': 1.29.0(zod@4.3.6)
+      '@sigstore/verify': 3.1.0
+      dotenv: 17.3.1
+      handlebars: 4.7.9
+      yaml: 2.8.3
+      zod: 4.3.6
+    transitivePeerDependencies:
+      - '@cfworker/json-schema'
+      - drizzle-orm
+      - postgres
+      - supports-color
+
+  '@donmai/dashboard@0.9.0(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)':
+    dependencies:
+      '@radix-ui/react-dialog': 1.1.15(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      '@radix-ui/react-dropdown-menu': 2.1.16(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      '@radix-ui/react-scroll-area': 1.2.10(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      '@radix-ui/react-separator': 1.1.8(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      '@radix-ui/react-slot': 1.2.4(@types/react@19.2.14)(react@19.2.1)
+      '@radix-ui/react-tabs': 1.1.13(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      '@radix-ui/react-tooltip': 1.2.8(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      class-variance-authority: 0.7.1
+      clsx: 2.1.1
+      lucide-react: 0.400.0(react@19.2.1)
+      next: 16.2.6(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      react: 19.2.1
+      react-dom: 19.2.1(react@19.2.1)
+      swr: 2.4.1(react@19.2.1)
+      tailwind-merge: 2.6.1
+      tailwindcss: 4.1.18
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
+
+  '@donmai/plugin-linear@0.9.0(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)':
+    dependencies:
+      '@donmai/core': 0.9.0
+      '@linear/sdk': 70.0.0(graphql@16.12.0)
+    optionalDependencies:
+      '@anthropic-ai/claude-agent-sdk': 0.2.87(zod@4.3.6)
+      zod: 4.3.6
+    transitivePeerDependencies:
+      - '@cfworker/json-schema'
+      - drizzle-orm
+      - graphql
+      - postgres
+      - supports-color
+
+  '@donmai/server@0.9.0(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)':
+    dependencies:
+      '@donmai/core': 0.9.0
+      '@donmai/plugin-linear': 0.9.0(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
+      ioredis: 5.9.3
+    transitivePeerDependencies:
+      - '@anthropic-ai/claude-agent-sdk'
+      - '@cfworker/json-schema'
+      - drizzle-orm
+      - graphql
+      - postgres
+      - supports-color
+      - zod
+
   '@dotenvx/dotenvx@1.52.0':
     dependencies:
       commander: 11.1.0
@@ -4355,76 +4490,66 @@ snapshots:
 
   '@radix-ui/rect@1.1.1': {}
 
-  '@renseiai/agentfactory-dashboard@0.8.41(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)':
+  '@renseiai/agentfactory-nextjs@0.8.66(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(@renseiai/plugin-linear@0.8.66(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6))(graphql@16.12.0)(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(zod@4.3.6)':
     dependencies:
-      '@radix-ui/react-dialog': 1.1.15(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      '@radix-ui/react-dropdown-menu': 2.1.16(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      '@radix-ui/react-scroll-area': 1.2.10(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      '@radix-ui/react-separator': 1.1.8(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      '@radix-ui/react-slot': 1.2.4(@types/react@19.2.14)(react@19.2.1)
-      '@radix-ui/react-tabs': 1.1.13(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      '@radix-ui/react-tooltip': 1.2.8(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      class-variance-authority: 0.7.1
-      clsx: 2.1.1
-      lucide-react: 0.400.0(react@19.2.1)
-      next: 16.2.6(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      react: 19.2.1
-      react-dom: 19.2.1(react@19.2.1)
-      swr: 2.4.1(react@19.2.1)
-      tailwind-merge: 2.6.1
-      tailwindcss: 4.1.18
-    transitivePeerDependencies:
-      - '@types/react'
-      - '@types/react-dom'
-
-  '@renseiai/agentfactory-nextjs@0.8.41(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(@renseiai/plugin-linear@0.8.41(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6))(graphql@16.12.0)(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(zod@4.3.6)':
-    dependencies:
-      '@renseiai/agentfactory': 0.8.41
-      '@renseiai/agentfactory-server': 0.8.41(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
-      '@renseiai/plugin-linear': 0.8.41(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
+      '@renseiai/agentfactory': 0.8.66
+      '@renseiai/agentfactory-server': 0.8.66(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
+      '@renseiai/plugin-linear': 0.8.66(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
       next: 16.2.6(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       yaml: 2.8.3
     transitivePeerDependencies:
       - '@anthropic-ai/claude-agent-sdk'
       - '@cfworker/json-schema'
+      - drizzle-orm
       - graphql
+      - postgres
       - supports-color
       - zod
 
-  '@renseiai/agentfactory-server@0.8.41(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)':
+  '@renseiai/agentfactory-server@0.8.66(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)':
     dependencies:
-      '@renseiai/agentfactory': 0.8.41
-      '@renseiai/plugin-linear': 0.8.41(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
+      '@renseiai/agentfactory': 0.8.66
+      '@renseiai/plugin-linear': 0.8.66(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
       ioredis: 5.9.3
     transitivePeerDependencies:
       - '@anthropic-ai/claude-agent-sdk'
       - '@cfworker/json-schema'
+      - drizzle-orm
       - graphql
+      - postgres
       - supports-color
       - zod
 
-  '@renseiai/agentfactory@0.8.41':
+  '@renseiai/agentfactory@0.8.66':
     dependencies:
       '@anthropic-ai/claude-agent-sdk': 0.2.87(zod@4.3.6)
       '@modelcontextprotocol/sdk': 1.29.0(zod@4.3.6)
+      '@renseiai/architectural-intelligence': 0.8.66
+      '@sigstore/verify': 3.1.0
       dotenv: 17.3.1
       handlebars: 4.7.9
       yaml: 2.8.3
       zod: 4.3.6
     transitivePeerDependencies:
       - '@cfworker/json-schema'
+      - drizzle-orm
+      - postgres
       - supports-color
 
-  '@renseiai/plugin-linear@0.8.41(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)':
+  '@renseiai/architectural-intelligence@0.8.66': {}
+
+  '@renseiai/plugin-linear@0.8.66(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)':
     dependencies:
       '@linear/sdk': 70.0.0(graphql@16.12.0)
-      '@renseiai/agentfactory': 0.8.41
+      '@renseiai/agentfactory': 0.8.66
     optionalDependencies:
       '@anthropic-ai/claude-agent-sdk': 0.2.87(zod@4.3.6)
       zod: 4.3.6
     transitivePeerDependencies:
       - '@cfworker/json-schema'
+      - drizzle-orm
       - graphql
+      - postgres
       - supports-color
 
   '@rollup/rollup-android-arm-eabi@4.57.1':
@@ -4503,6 +4628,20 @@ snapshots:
     optional: true
 
   '@rtsao/scc@1.1.0': {}
+
+  '@sigstore/bundle@4.0.0':
+    dependencies:
+      '@sigstore/protobuf-specs': 0.5.1
+
+  '@sigstore/core@3.2.1': {}
+
+  '@sigstore/protobuf-specs@0.5.1': {}
+
+  '@sigstore/verify@3.1.0':
+    dependencies:
+      '@sigstore/bundle': 4.0.0
+      '@sigstore/core': 3.2.1
+      '@sigstore/protobuf-specs': 0.5.1
 
   '@swc/helpers@0.5.15':
     dependencies:
