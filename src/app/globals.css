@@ -34,28 +34,32 @@
   --color-warning: hsl(var(--warning));
   --color-error: hsl(var(--error));
 
-  /* Donmai brand colors */
-  --donmai-accent: #D94F2A;
-  --donmai-bright: #E5613B;
-  --donmai-hot:    #F07D5E;
-  --donmai-dim:    #A83820;
-  --donmai-glow:   rgba(217,79,42,0.15);
-  --donmai-ember:  rgba(217,79,42,0.08);
+  /* Donmai brand palette — mirrors donmai.dev globals.css */
+  --donmai-accent:  #D94F2A;
+  --donmai-bright:  #E5613B;
+  --donmai-hot:     #F07D5E;
+  --donmai-dim:     #A83820;
+  --donmai-glow:    rgba(217,79,42,0.15);
+  --donmai-ember:   rgba(217,79,42,0.08);
 
-  /* Donmai dashboard surface/status colors */
-  --color-donmai-bg-primary: #0A0E1A;
-  --color-donmai-bg-secondary: #111827;
-  --color-donmai-surface: #1A1F2E;
-  --color-donmai-surface-border: #2A3040;
-  --color-donmai-accent: var(--donmai-accent);
-  --color-donmai-status-success: #22C55E;
-  --color-donmai-status-warning: #F59E0B;
-  --color-donmai-status-error: #EF4444;
-  --color-donmai-text-primary: #F9FAFB;
-  --color-donmai-text-secondary: #9CA3AF;
-  --color-donmai-code: #A5B4FC;
+  /* Inherited surface tokens (mirrors donmai.dev) */
+  --surface-base:   #09090B;
+  --surface-raised: #111113;
+  --surface-card:   #18181B;
+  --surface-hover:  #1F1F23;
+  --surface-border: #27272A;
+  --surface-input:  #1E1E21;
 
-  --font-sans: 'Inter', 'Geist Sans', system-ui, sans-serif;
+  /* Text */
+  --text-primary:   #FAFAFA;
+  --text-secondary: #A1A1AA;
+  --text-muted:     #71717A;
+  --text-disabled:  #52525B;
+
+  /* Semantics */
+  --color-info:     #3B82F6;
+
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'Geist Mono', ui-monospace, monospace;
 
   /* Dashboard font sizes */
