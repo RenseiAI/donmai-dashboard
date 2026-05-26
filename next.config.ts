@@ -47,6 +47,7 @@ const securityHeaders = [
 ]
 
 const nextConfig: NextConfig = {
+  basePath: '/dashboard',
   transpilePackages: ['@donmai/dashboard'],
   // Exclude server-side packages that use Node.js-only APIs (child_process spawn etc.)
   // from Turbopack bundling. @donmai/core and @renseiai/agentfactory both contain
