@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@donmai/dashboard':
-        specifier: ^0.9.0
-        version: 0.9.0(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)
+        specifier: ^0.9.1
+        version: 0.9.1(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)
       '@donmai/plugin-linear':
         specifier: ^0.9.0
         version: 0.9.0(@anthropic-ai/claude-agent-sdk@0.2.87(zod@4.3.6))(graphql@16.12.0)(zod@4.3.6)
@@ -190,8 +190,8 @@ packages:
     resolution: {integrity: sha512-bK2282+JJEHR5kbchUQGL9rHEo9EjmylLyMJ/RS3cK0ge4oM1XYTFL7a6pmk4+QbyJU74jz/pBoL4nJEVVh7Ww==}
     engines: {node: '>=22.0.0'}
 
-  '@donmai/dashboard@0.9.0':
-    resolution: {integrity: sha512-TRDTZpc9nDii4voU7aZsi0BRp18Bzk4WuYuD2Trvkq9PNsxc0YheJ0Fa0PcGBoBWiyb2R2bm4/FV/HITnh1gxA==}
+  '@donmai/dashboard@0.9.1':
+    resolution: {integrity: sha512-ZHlY94OeevKnNmPdVWqoanKM27OcMiYiJ1MC+qiNzM3HW8ApZeS2ZYzHmSB4Bll+UqfzN1AaJXmOgqP+IpJ5nA==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       next: '>=14.0.0'
@@ -1141,6 +1141,7 @@ packages:
   '@renseiai/architectural-intelligence@0.8.66':
     resolution: {integrity: sha512-pvubicETYc0YjqqimQxQ3Cl6Tds8ZARJDEbvna/DRpjvdAW4VkWXg7AgyvGU8yo7FWYOKyCnsnKt4CVb0+WhrA==}
     engines: {node: '>=22.0.0'}
+    deprecated: Renamed to @donmai/architectural-intelligence. See https://donmai.dev/docs/migration.
     peerDependencies:
       drizzle-orm: '>=0.40.0'
       postgres: '>=3.4.0'
@@ -3686,7 +3687,7 @@ snapshots:
       - postgres
       - supports-color
 
-  '@donmai/dashboard@0.9.0(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)':
+  '@donmai/dashboard@0.9.1(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(tailwindcss@4.1.18)':
     dependencies:
       '@radix-ui/react-dialog': 1.1.15(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       '@radix-ui/react-dropdown-menu': 2.1.16(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
