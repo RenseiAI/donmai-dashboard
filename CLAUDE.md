@@ -7,7 +7,7 @@ This is a **deployment repo**, not a library. It consumes Donmai packages from n
 ## Architecture
 
 ```
-donmai-dashboard/  (repo: agent-fleet, renaming to donmai-dashboard post-Wave 5)
+donmai-dashboard/  (repo: donmai-dashboard, renamed from agent-fleet in Wave 5)
 ├── src/lib/
 │   ├── config.ts          # Route wiring (connects prompts → route factories)
 │   ├── prompts.ts         # Work type keywords, prompt templates, auto-trigger config
