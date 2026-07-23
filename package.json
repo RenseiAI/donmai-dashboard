@@ -19,7 +19,7 @@
     "@donmai/server": "^0.9.5",
     "@renseiai/agentfactory-nextjs": "^0.8.66",
     "ioredis": "^5.11.0",
-    "next": "16.2.7",
+    "next": "16.2.11",
     "react": "19.2.7",
     "react-dom": "19.2.7",
     "tailwind-merge": "^2.3.0",
@@ -39,6 +39,6 @@
     "tailwindcss": "^4",
     "typescript": "^5",
     "typescript-eslint": "^8.48.1",
-    "vitest": "^3.2.3"
+    "vitest": "^3.2.7"
   }
 }
