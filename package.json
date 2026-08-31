@@ -18,11 +18,11 @@
     "@donmai/plugin-linear": "^0.9.5",
     "@donmai/server": "^0.9.5",
     "@renseiai/agentfactory-nextjs": "^0.8.66",
-    "ioredis": "^5.11.0",
+    "ioredis": "^6.0.0",
     "next": "16.2.11",
     "react": "19.2.7",
     "react-dom": "19.2.7",
-    "tailwind-merge": "^2.3.0",
+    "tailwind-merge": "^3.6.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
