@@ -1,5 +1,7 @@
 # donmai-dashboard — fleet-dashboard deployment for agent.rensei.dev (private deployment)
 
+> **RETIRED 2026-10-19. The repository is archived and the Vercel project is paused.** See `README.md`. Do not start work here.
+
 Standalone PRIVATE deployment of the donmai fleet dashboard, serving
 `agent.rensei.dev` (301 → `donmai.dev/dashboard`). Next.js. This is a
 deployment, not a library: route handlers, dashboard UI, middleware, worker
